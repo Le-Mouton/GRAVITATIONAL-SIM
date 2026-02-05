@@ -1,0 +1,3 @@
+/Users/mathys/Documents/_Mout/code-vid/build/CMakeFiles/project.dir
+/Users/mathys/Documents/_Mout/code-vid/build/CMakeFiles/edit_cache.dir
+/Users/mathys/Documents/_Mout/code-vid/build/CMakeFiles/rebuild_cache.dir
