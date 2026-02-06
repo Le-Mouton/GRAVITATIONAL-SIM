@@ -23,7 +23,7 @@ const unsigned int SCR_WIDTH = 1920;
 const unsigned int SCR_HEIGHT = 1280;
 
 // camera
-glm::vec3 cameraPos   = glm::vec3(0.0f, 0.0f, 70.0f);  
+glm::vec3 cameraPos   = glm::vec3(0.0f, 0.0f, 90.0f);  
 glm::vec3 cameraFront = glm::vec3(0.0f, 0.0f, -1.0f);
 glm::vec3 cameraUp    = glm::vec3(0.0f, 1.0f, 0.0f);
 
@@ -218,7 +218,6 @@ int main() {
         ImGui::Begin("Controls");
 
         ImGui::Text("FPS: %f", 1.0f / (deltaTime > 0.0f ? deltaTime : 1.0f));
-        ImGui::Text("Iteration par boucle: %d", particule.nombreIteration);
         ImGui::Checkbox("Pause", &pause);
         ImGui::Checkbox("Collision", &particule.collision);
         ImGui::Checkbox("Dislocation", &particule.enableDislocation);
@@ -310,7 +309,7 @@ int main() {
 
         ImGui::Image((ImTextureID)(intptr_t)particule.texEnergy,
                      ImVec2(256, 256),
-                     ImVec2(u0, v0), ImVec2(u1, v1));
+                     ImVec2(u0, v1), ImVec2(u1, v0));
         ImGui::End();
 
         // --- MASS ---
@@ -322,7 +321,7 @@ int main() {
         ImGui::Text("Colormap XY (worldSize=%.1f)", particule.worldSize);
         ImGui::Image((ImTextureID)(intptr_t)particule.texMass,
                      ImVec2(256, 256),
-                     ImVec2(u0, v0), ImVec2(u1, v1));
+                     ImVec2(u0, v1), ImVec2(u1, v0));
         ImGui::End();
 
         // Rendering

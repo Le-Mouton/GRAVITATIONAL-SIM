@@ -11,6 +11,10 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 
+#ifdef USE_OMP
+  #include <omp.h>
+#endif
+
 struct Vertex
 {
     float x, y, z;     // position
@@ -60,13 +64,12 @@ public:
 
 	float energyTotal = 0;
 	float massTotal = 0;
-	float worldSize = 40.0f;
+	float worldSize = 200.0f;
 	float mouseStrength = 80.0f;
-	int nombreIteration = 0;
 
 	float radiusParticule = 0.09f;
 
-	bool collision = false;
+	bool collision = true;
 
 	// --- Dislocation (tunable) ---
 
@@ -81,6 +84,9 @@ public:
 
 	std::vector<glm::vec3> acc;
 	std::vector<uint8_t> touched;
+
+	size_t gpuCapacityBytes = 0;
+	size_t trailCapacityBytes = 0;
 
 	Particules()
 	: shader(shader_vs, shader_fs),
@@ -108,7 +114,7 @@ public:
 
 	    static std::mt19937 rng{ std::random_device{}() };
 	    std::uniform_real_distribution<float> angleDist(0.0f, 2.0f * 3.1415926535f);
-	    std::uniform_real_distribution<float> radiusDist(5.f, 15.f);
+	    std::uniform_real_distribution<float> radiusDist(0.f, 50.f);
 	    std::uniform_real_distribution<float> jitter(-0.05f, 0.05f);
 	    std::uniform_real_distribution<float> vx0(-v0, v0);
 	    std::uniform_real_distribution<float> vy0(-v0, v0);
@@ -344,8 +350,6 @@ public:
 		vertices.reserve(vertices.size() + (size_t)maxSpawnPerFrame);
 		trails.reserve(trails.size() + (size_t)maxSpawnPerFrame);
 
-	    nombreIteration = 0;
-
 		int spawnedThisFrame = 0;
 
 
@@ -358,95 +362,103 @@ public:
 
 	    if (N == 0) return;
 
+		#ifdef USE_OMP
+		#pragma omp parallel for schedule(static)
+		#endif
+		for (int i = 0; i < N; ++i)
+		{
+		    if (!vertices[i].alive) { acc[i] = glm::vec3(0.0f); continue; }
 
-	    energyTotal = 0.0f;
-	    massTotal = 0.0f;
+		    float xi = vertices[i].x, yi = vertices[i].y, zi = vertices[i].z;
 
-	    for (int i = 0; i < N; ++i)
-	    {
-	        energyTotal += vertices[i].energy;
-	        massTotal += vertices[i].mass;
+		    float axi = 0.f, ayi = 0.f, azi = 0.f;
 
-	        glm::vec3 pi(vertices[i].x, vertices[i].y, vertices[i].z);
-	        float mi = vertices[i].mass;
+		    for (int j = 0; j < N; ++j)
+		    {
+		        if (j == i) continue;
+		        if (!vertices[j].alive) continue;
 
-	        for (int j = i + 1; j < N; ++j)
-	        {
-	            ++nombreIteration;
+		        float dx = vertices[j].x - xi;
+		        float dy = vertices[j].y - yi;
+		        float dz = vertices[j].z - zi;
 
-	            glm::vec3 pj(vertices[j].x, vertices[j].y, vertices[j].z);
-	            float mj = vertices[j].mass;
+		        float dist2 = dx*dx + dy*dy + dz*dz + softening*softening;
+		        if (dist2 < 1e-12f) continue;
 
-	            glm::vec3 d = pj - pi;
-	            float dist2 = glm::dot(d, d) + softening * softening;
+		        float invDist = 1.0f / std::sqrt(dist2);
+		        float invDist3 = invDist / dist2;
 
-	            if (dist2 < 1e-12f) continue;
+		        float s = G * vertices[j].mass * invDist3; // a = G*mj * r / r^3
 
-	            float invDist = 1.0f / std::sqrt(dist2);
-	            glm::vec3 dir = d * invDist;
+		        axi += dx * s;
+		        ayi += dy * s;
+		        azi += dz * s;
+		    }
 
-	            float forceMag = G * (mi * mj) / dist2;
-	            glm::vec3 F = dir * forceMag;
+		    acc[i] = glm::vec3(axi, ayi, azi);
+		}
 
-	            acc[i] += F / mi;
-	            acc[j] -= F / mj;
-	        }
-	    }
+		if (mouseDown)
+		{
+		    const float mouseSoft = 0.10f;
 
-	    if (mouseDown)
-	    {
-	        const float mouseSoft = 0.10f;
+		    #ifdef USE_OMP
+		    #pragma omp parallel for schedule(static)
+		    #endif
+		    for (int i = 0; i < N; ++i)
+		    {
+		        if (!vertices[i].alive) continue;
 
-	        for (int i = 0; i < N; ++i)
-	        {
-	            ++nombreIteration;
+		        float dx = mouseWorld.x - vertices[i].x;
+		        float dy = mouseWorld.y - vertices[i].y;
+		        float dz = mouseWorld.z - vertices[i].z;
 
-	            glm::vec3 p(vertices[i].x, vertices[i].y, vertices[i].z);
-	            glm::vec3 d = mouseWorld - p;
+		        float dist2 = (dx*dx + dy*dy + dz*dz + mouseSoft*mouseSoft) * 1e-5f;
+		        if (dist2 < 1e-12f) continue;
 
-	            float dist2 = (glm::dot(d, d) + mouseSoft * mouseSoft) * 1e-5;
-	            if (dist2 < 1e-12f) continue;
+		        float invDist = 1.0f / std::sqrt(dist2);
+		        float fx = dx * invDist * (mouseStrength / dist2);
+		        float fy = dy * invDist * (mouseStrength / dist2);
+		        float fz = dz * invDist * (mouseStrength / dist2);
 
-	            float invDist = 1.0f / std::sqrt(dist2);
-	            glm::vec3 dir = d * invDist;
+		        float invMi = 1.0f / (vertices[i].mass + 1e-9f);
+		        acc[i] += glm::vec3(fx*invMi, fy*invMi, fz*invMi);
+		    }
+		}
 
-	            float mi = vertices[i].mass;
-	            glm::vec3 Fm = dir * (mouseStrength / dist2);
+		#ifdef USE_OMP
+		#pragma omp parallel for schedule(static)
+		#endif
+		for (int i = 0; i < N; ++i)
+		{
+		    if (!vertices[i].alive) continue;
 
-	            acc[i] += Fm / mi;
-	        }
-	    }
+		    vertices[i].vx += acc[i].x * dt;
+		    vertices[i].vy += acc[i].y * dt;
+		    vertices[i].vz += acc[i].z * dt;
 
-	    for (int i = 0; i < N; ++i)
-	    {
-	        ++nombreIteration;
+		    vertices[i].x += vertices[i].vx * dt;
+		    vertices[i].y += vertices[i].vy * dt;
+		    vertices[i].z += vertices[i].vz * dt;
 
-	        vertices[i].vx += acc[i].x * dt;
-	        vertices[i].vy += acc[i].y * dt;
-	        vertices[i].vz += acc[i].z * dt;
+		    auto bounce = [&](float& p, float& v)
+		    {
+		        if (p < -worldSize) { p = -worldSize; v = -v; }
+		        if (p >  worldSize) { p =  worldSize; v = -v; }
+		    };
+		    bounce(vertices[i].x, vertices[i].vx);
+		    bounce(vertices[i].y, vertices[i].vy);
+		    bounce(vertices[i].z, vertices[i].vz);
 
-	        vertices[i].x += vertices[i].vx * dt;
-	        vertices[i].y += vertices[i].vy * dt;
-	        vertices[i].z += vertices[i].vz * dt;
+		    float v2 = vertices[i].vx*vertices[i].vx + vertices[i].vy*vertices[i].vy + vertices[i].vz*vertices[i].vz;
+		    vertices[i].energy = 0.5f * vertices[i].mass * v2;
 
-	        auto bounce = [&](float& p, float& v)
-	        {
-	            if (p < -worldSize) { p = -worldSize; v = -v; }
-	            if (p >  worldSize) { p =  worldSize; v = -v; }
-	        };
-	        bounce(vertices[i].x, vertices[i].vx);
-	        bounce(vertices[i].y, vertices[i].vy);
-	        bounce(vertices[i].z, vertices[i].vz);
-
-	        float v2 = vertices[i].vx*vertices[i].vx + vertices[i].vy*vertices[i].vy + vertices[i].vz*vertices[i].vz;
-	        vertices[i].energy = 0.5f * vertices[i].mass * v2;
-
-	        auto& tr = trails[i];
-	        tr.push_back(glm::vec3(vertices[i].x, vertices[i].y, vertices[i].z));
-	        if ((int)tr.size() > trailMax) {
-	            tr.erase(tr.begin(), tr.begin() + ((int)tr.size() - trailMax));
-	        }
-	    }
+		    auto& tr = trails[i];
+		    tr.push_back(glm::vec3(vertices[i].x, vertices[i].y, vertices[i].z));
+		    if ((int)tr.size() > trailMax) {
+		        tr.erase(tr.begin(), tr.begin() + ((int)tr.size() - trailMax));
+		    }
+		}
 
 		for (int i = 0; i < N; ++i)
 		{
@@ -464,23 +476,8 @@ public:
 		        float rSum  = vertices[i].radius + vertices[j].radius;
 		        float dist2 = glm::dot(d, d);
 
-		        // if (dist2 <= rSum * rSum && collision)
-		        // {
-		        //     int a = i, b = j;
-
-		        //     float mi = vertices[i].mass;
-		        //     float mj = vertices[j].mass;
-
-		        //     if (mj > mi) { a = j; b = i; }   // absorbeur = plus massif
-
-		        //     mergeBodies(a, b);
-		        // }
-
 		        if (dist2 <= rSum * rSum && collision)
 				{
-				    // // anti-chaîne
-				    // if (vertices[i].noCollideFrames > 0 || vertices[j].noCollideFrames > 0) continue;
-				    // if (vertices[i].collidedThisFrame || vertices[j].collidedThisFrame) continue;
 
 				    int a = i, b = j;
 				    if (vertices[b].mass > vertices[a].mass) std::swap(a, b); // a = plus massif
@@ -519,18 +516,24 @@ public:
 
 				    if (!didDislocate)
 				    {
-				        // fallback merge
 				        mergeBodies(a, b);
-				        //vertices[a].noCollideFrames = collideCooldown;
-				        //vertices[a].collidedThisFrame = 1;
 				    }
 
-				    break; // 1 seul event par i et par frame (anti-explosion)
+				    break;
 				}
 		    }
 		}
 
 	    compactDead();
+
+	    energyTotal = 0.0f;
+		massTotal   = 0.0f;
+		for (int i = 0; i < N; ++i) {
+		    if (!vertices[i].alive) continue;
+		    energyTotal += vertices[i].energy;
+		    massTotal   += vertices[i].mass;
+		}
+
 
 	    upload();
 	}
@@ -604,8 +607,7 @@ public:
 
 	        int idx = iy * hmW + ix;
 
-	        float m = M[p.type];
-	        massGrid[idx] += m;
+			massGrid[idx] += p.mass;
 	        energyGrid[idx] += p.energy;
 	    }
 
@@ -623,10 +625,14 @@ public:
 	    if (maxE < 1e-12f) maxE = 1.0f;
 
 	    // Convert -> RGB + upload textures
-	    for (int i = 0; i < hmW*hmH; ++i)
+	    for (int i = hmW*hmH; i > 0 ; --i)
 	    {
-	        float tm = massGrid[i] / maxM;
-	        float te = energyGrid[i] / maxE;
+	        float tm = std::log1p(massGrid[i]);
+			float tmMax = std::log1p(maxM);
+			tm = tm / (maxM > 1e-12f ? tmMax : 1.0f);
+			float te = std::log1p(energyGrid[i]);
+			float teMax = std::log1p(maxE);
+			te = te / (maxE > 1e-12f ? teMax : 1.0f);
 
 	        unsigned char r,g,b;
 
@@ -647,10 +653,13 @@ public:
 	void upload()
 	{
 	    glBindBuffer(GL_ARRAY_BUFFER, VBO);
-	    glBufferData(GL_ARRAY_BUFFER,
-	                 vertices.size() * sizeof(Vertex),
-	                 vertices.data(),
-	                 GL_DYNAMIC_DRAW);
+	    size_t bytes = vertices.size() * sizeof(Vertex);
+
+	    if (bytes > gpuCapacityBytes) {
+	        gpuCapacityBytes = std::max(bytes, gpuCapacityBytes * 2 + 1024);
+	        glBufferData(GL_ARRAY_BUFFER, gpuCapacityBytes, nullptr, GL_DYNAMIC_DRAW); // réserve
+	    }
+	    glBufferSubData(GL_ARRAY_BUFFER, 0, bytes, vertices.data());
 	}
 
 	void renderTrails()
@@ -681,12 +690,14 @@ public:
 	    glLineWidth(trailWidth);
 
 	    glBindVertexArray(trailVAO);
-	    glBindBuffer(GL_ARRAY_BUFFER, trailVBO);
+		glBindBuffer(GL_ARRAY_BUFFER, trailVBO);
+		size_t bytes = trailGPU.size() * sizeof(TrailGPU);
 
-	    glBufferData(GL_ARRAY_BUFFER,
-	                 trailGPU.size() * sizeof(TrailGPU),
-	                 trailGPU.data(),
-	                 GL_DYNAMIC_DRAW);
+		if (bytes > trailCapacityBytes) {
+		    trailCapacityBytes = std::max(bytes, trailCapacityBytes * 2 + 1024);
+		    glBufferData(GL_ARRAY_BUFFER, trailCapacityBytes, nullptr, GL_DYNAMIC_DRAW);
+		}
+		glBufferSubData(GL_ARRAY_BUFFER, 0, bytes, trailGPU.data());
 
 	    glDrawArrays(GL_LINES, 0, (GLsizei)trailGPU.size());
 

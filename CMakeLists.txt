@@ -20,6 +20,12 @@ target_link_libraries(project PRIVATE
 
 )
 
+find_package(OpenMP)
+if(OpenMP_CXX_FOUND)
+  target_link_libraries(TON_TARGET PRIVATE OpenMP::OpenMP_CXX)
+  target_compile_definitions(TON_TARGET PRIVATE USE_OMP=1)
+endif()
+
 target_sources(project PRIVATE
     include/imgui/imgui.cpp
     include/imgui/imgui_draw.cpp
