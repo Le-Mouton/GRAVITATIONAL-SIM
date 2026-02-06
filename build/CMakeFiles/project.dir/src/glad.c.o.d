@@ -1,5 +1,5 @@
 CMakeFiles/project.dir/src/glad.c.o: \
-  /Users/mathys/Documents/_Mout/code-vid/src/glad.c \
+  /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/src/glad.c \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_stdio.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_bounds.h \
@@ -92,7 +92,7 @@ CMakeFiles/project.dir/src/glad.c.o: \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/_strings.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/secure/_strings.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/secure/_string.h \
-  /Users/mathys/Documents/_Mout/code-vid/include/glad/glad.h \
-  /Users/mathys/Documents/_Mout/code-vid/include/KHR/khrplatform.h \
+  /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/include/glad/glad.h \
+  /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/include/KHR/khrplatform.h \
   /Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include/dlfcn.h \
   /Library/Developer/CommandLineTools/usr/lib/clang/17/include/stdbool.h

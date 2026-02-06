@@ -5,7 +5,7 @@
 # compile CXX with /usr/bin/c++
 C_DEFINES = 
 
-C_INCLUDES = -I/Users/mathys/Documents/_Mout/code-vid/include -I/Users/mathys/Documents/_Mout/code-vid/include/imgui -I/Users/mathys/Documents/_Mout/code-vid/include/imgui/backends -I/opt/homebrew/opt/libomp/include -isystem /opt/homebrew/include
+C_INCLUDES = -I/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/include -I/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/include/imgui -I/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/include/imgui/backends -I/opt/homebrew/opt/libomp/include -isystem /opt/homebrew/include
 
 C_FLAGSarm64 = -g -arch arm64 -Xpreprocessor -fopenmp
 
@@ -13,7 +13,7 @@ C_FLAGS = -g -arch arm64 -Xpreprocessor -fopenmp
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/Users/mathys/Documents/_Mout/code-vid/include -I/Users/mathys/Documents/_Mout/code-vid/include/imgui -I/Users/mathys/Documents/_Mout/code-vid/include/imgui/backends -I/opt/homebrew/opt/libomp/include -isystem /opt/homebrew/include
+CXX_INCLUDES = -I/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/include -I/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/include/imgui -I/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/include/imgui/backends -I/opt/homebrew/opt/libomp/include -isystem /opt/homebrew/include
 
 CXX_FLAGSarm64 = -g -std=gnu++20 -arch arm64 -Xpreprocessor -fopenmp
 

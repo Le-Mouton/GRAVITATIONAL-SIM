@@ -53,10 +53,10 @@ RM = /opt/homebrew/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/mathys/Documents/_Mout/code-vid
+CMAKE_SOURCE_DIR = /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/mathys/Documents/_Mout/code-vid/build
+CMAKE_BINARY_DIR = /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/project.dir/depend.make
@@ -73,116 +73,116 @@ CMakeFiles/project.dir/codegen:
 .PHONY : CMakeFiles/project.dir/codegen
 
 CMakeFiles/project.dir/src/main.cpp.o: CMakeFiles/project.dir/flags.make
-CMakeFiles/project.dir/src/main.cpp.o: /Users/mathys/Documents/_Mout/code-vid/src/main.cpp
+CMakeFiles/project.dir/src/main.cpp.o: /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/src/main.cpp
 CMakeFiles/project.dir/src/main.cpp.o: CMakeFiles/project.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mathys/Documents/_Mout/code-vid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/project.dir/src/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/project.dir/src/main.cpp.o -MF CMakeFiles/project.dir/src/main.cpp.o.d -o CMakeFiles/project.dir/src/main.cpp.o -c /Users/mathys/Documents/_Mout/code-vid/src/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/project.dir/src/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/project.dir/src/main.cpp.o -MF CMakeFiles/project.dir/src/main.cpp.o.d -o CMakeFiles/project.dir/src/main.cpp.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/src/main.cpp
 
 CMakeFiles/project.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/project.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mathys/Documents/_Mout/code-vid/src/main.cpp > CMakeFiles/project.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/src/main.cpp > CMakeFiles/project.dir/src/main.cpp.i
 
 CMakeFiles/project.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/project.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mathys/Documents/_Mout/code-vid/src/main.cpp -o CMakeFiles/project.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/src/main.cpp -o CMakeFiles/project.dir/src/main.cpp.s
 
 CMakeFiles/project.dir/src/glad.c.o: CMakeFiles/project.dir/flags.make
-CMakeFiles/project.dir/src/glad.c.o: /Users/mathys/Documents/_Mout/code-vid/src/glad.c
+CMakeFiles/project.dir/src/glad.c.o: /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/src/glad.c
 CMakeFiles/project.dir/src/glad.c.o: CMakeFiles/project.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mathys/Documents/_Mout/code-vid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/project.dir/src/glad.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/project.dir/src/glad.c.o -MF CMakeFiles/project.dir/src/glad.c.o.d -o CMakeFiles/project.dir/src/glad.c.o -c /Users/mathys/Documents/_Mout/code-vid/src/glad.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building C object CMakeFiles/project.dir/src/glad.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT CMakeFiles/project.dir/src/glad.c.o -MF CMakeFiles/project.dir/src/glad.c.o.d -o CMakeFiles/project.dir/src/glad.c.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/src/glad.c
 
 CMakeFiles/project.dir/src/glad.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing C source to CMakeFiles/project.dir/src/glad.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/mathys/Documents/_Mout/code-vid/src/glad.c > CMakeFiles/project.dir/src/glad.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/src/glad.c > CMakeFiles/project.dir/src/glad.c.i
 
 CMakeFiles/project.dir/src/glad.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling C source to assembly CMakeFiles/project.dir/src/glad.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/mathys/Documents/_Mout/code-vid/src/glad.c -o CMakeFiles/project.dir/src/glad.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/src/glad.c -o CMakeFiles/project.dir/src/glad.c.s
 
 CMakeFiles/project.dir/include/imgui/imgui.cpp.o: CMakeFiles/project.dir/flags.make
-CMakeFiles/project.dir/include/imgui/imgui.cpp.o: /Users/mathys/Documents/_Mout/code-vid/include/imgui/imgui.cpp
+CMakeFiles/project.dir/include/imgui/imgui.cpp.o: /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/include/imgui/imgui.cpp
 CMakeFiles/project.dir/include/imgui/imgui.cpp.o: CMakeFiles/project.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mathys/Documents/_Mout/code-vid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/project.dir/include/imgui/imgui.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/project.dir/include/imgui/imgui.cpp.o -MF CMakeFiles/project.dir/include/imgui/imgui.cpp.o.d -o CMakeFiles/project.dir/include/imgui/imgui.cpp.o -c /Users/mathys/Documents/_Mout/code-vid/include/imgui/imgui.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/project.dir/include/imgui/imgui.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/project.dir/include/imgui/imgui.cpp.o -MF CMakeFiles/project.dir/include/imgui/imgui.cpp.o.d -o CMakeFiles/project.dir/include/imgui/imgui.cpp.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/include/imgui/imgui.cpp
 
 CMakeFiles/project.dir/include/imgui/imgui.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/project.dir/include/imgui/imgui.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mathys/Documents/_Mout/code-vid/include/imgui/imgui.cpp > CMakeFiles/project.dir/include/imgui/imgui.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/include/imgui/imgui.cpp > CMakeFiles/project.dir/include/imgui/imgui.cpp.i
 
 CMakeFiles/project.dir/include/imgui/imgui.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/project.dir/include/imgui/imgui.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mathys/Documents/_Mout/code-vid/include/imgui/imgui.cpp -o CMakeFiles/project.dir/include/imgui/imgui.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/include/imgui/imgui.cpp -o CMakeFiles/project.dir/include/imgui/imgui.cpp.s
 
 CMakeFiles/project.dir/include/imgui/imgui_draw.cpp.o: CMakeFiles/project.dir/flags.make
-CMakeFiles/project.dir/include/imgui/imgui_draw.cpp.o: /Users/mathys/Documents/_Mout/code-vid/include/imgui/imgui_draw.cpp
+CMakeFiles/project.dir/include/imgui/imgui_draw.cpp.o: /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/include/imgui/imgui_draw.cpp
 CMakeFiles/project.dir/include/imgui/imgui_draw.cpp.o: CMakeFiles/project.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mathys/Documents/_Mout/code-vid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/project.dir/include/imgui/imgui_draw.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/project.dir/include/imgui/imgui_draw.cpp.o -MF CMakeFiles/project.dir/include/imgui/imgui_draw.cpp.o.d -o CMakeFiles/project.dir/include/imgui/imgui_draw.cpp.o -c /Users/mathys/Documents/_Mout/code-vid/include/imgui/imgui_draw.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/project.dir/include/imgui/imgui_draw.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/project.dir/include/imgui/imgui_draw.cpp.o -MF CMakeFiles/project.dir/include/imgui/imgui_draw.cpp.o.d -o CMakeFiles/project.dir/include/imgui/imgui_draw.cpp.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/include/imgui/imgui_draw.cpp
 
 CMakeFiles/project.dir/include/imgui/imgui_draw.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/project.dir/include/imgui/imgui_draw.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mathys/Documents/_Mout/code-vid/include/imgui/imgui_draw.cpp > CMakeFiles/project.dir/include/imgui/imgui_draw.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/include/imgui/imgui_draw.cpp > CMakeFiles/project.dir/include/imgui/imgui_draw.cpp.i
 
 CMakeFiles/project.dir/include/imgui/imgui_draw.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/project.dir/include/imgui/imgui_draw.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mathys/Documents/_Mout/code-vid/include/imgui/imgui_draw.cpp -o CMakeFiles/project.dir/include/imgui/imgui_draw.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/include/imgui/imgui_draw.cpp -o CMakeFiles/project.dir/include/imgui/imgui_draw.cpp.s
 
 CMakeFiles/project.dir/include/imgui/imgui_tables.cpp.o: CMakeFiles/project.dir/flags.make
-CMakeFiles/project.dir/include/imgui/imgui_tables.cpp.o: /Users/mathys/Documents/_Mout/code-vid/include/imgui/imgui_tables.cpp
+CMakeFiles/project.dir/include/imgui/imgui_tables.cpp.o: /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/include/imgui/imgui_tables.cpp
 CMakeFiles/project.dir/include/imgui/imgui_tables.cpp.o: CMakeFiles/project.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mathys/Documents/_Mout/code-vid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/project.dir/include/imgui/imgui_tables.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/project.dir/include/imgui/imgui_tables.cpp.o -MF CMakeFiles/project.dir/include/imgui/imgui_tables.cpp.o.d -o CMakeFiles/project.dir/include/imgui/imgui_tables.cpp.o -c /Users/mathys/Documents/_Mout/code-vid/include/imgui/imgui_tables.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/project.dir/include/imgui/imgui_tables.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/project.dir/include/imgui/imgui_tables.cpp.o -MF CMakeFiles/project.dir/include/imgui/imgui_tables.cpp.o.d -o CMakeFiles/project.dir/include/imgui/imgui_tables.cpp.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/include/imgui/imgui_tables.cpp
 
 CMakeFiles/project.dir/include/imgui/imgui_tables.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/project.dir/include/imgui/imgui_tables.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mathys/Documents/_Mout/code-vid/include/imgui/imgui_tables.cpp > CMakeFiles/project.dir/include/imgui/imgui_tables.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/include/imgui/imgui_tables.cpp > CMakeFiles/project.dir/include/imgui/imgui_tables.cpp.i
 
 CMakeFiles/project.dir/include/imgui/imgui_tables.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/project.dir/include/imgui/imgui_tables.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mathys/Documents/_Mout/code-vid/include/imgui/imgui_tables.cpp -o CMakeFiles/project.dir/include/imgui/imgui_tables.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/include/imgui/imgui_tables.cpp -o CMakeFiles/project.dir/include/imgui/imgui_tables.cpp.s
 
 CMakeFiles/project.dir/include/imgui/imgui_widgets.cpp.o: CMakeFiles/project.dir/flags.make
-CMakeFiles/project.dir/include/imgui/imgui_widgets.cpp.o: /Users/mathys/Documents/_Mout/code-vid/include/imgui/imgui_widgets.cpp
+CMakeFiles/project.dir/include/imgui/imgui_widgets.cpp.o: /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/include/imgui/imgui_widgets.cpp
 CMakeFiles/project.dir/include/imgui/imgui_widgets.cpp.o: CMakeFiles/project.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mathys/Documents/_Mout/code-vid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/project.dir/include/imgui/imgui_widgets.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/project.dir/include/imgui/imgui_widgets.cpp.o -MF CMakeFiles/project.dir/include/imgui/imgui_widgets.cpp.o.d -o CMakeFiles/project.dir/include/imgui/imgui_widgets.cpp.o -c /Users/mathys/Documents/_Mout/code-vid/include/imgui/imgui_widgets.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/project.dir/include/imgui/imgui_widgets.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/project.dir/include/imgui/imgui_widgets.cpp.o -MF CMakeFiles/project.dir/include/imgui/imgui_widgets.cpp.o.d -o CMakeFiles/project.dir/include/imgui/imgui_widgets.cpp.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/include/imgui/imgui_widgets.cpp
 
 CMakeFiles/project.dir/include/imgui/imgui_widgets.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/project.dir/include/imgui/imgui_widgets.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mathys/Documents/_Mout/code-vid/include/imgui/imgui_widgets.cpp > CMakeFiles/project.dir/include/imgui/imgui_widgets.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/include/imgui/imgui_widgets.cpp > CMakeFiles/project.dir/include/imgui/imgui_widgets.cpp.i
 
 CMakeFiles/project.dir/include/imgui/imgui_widgets.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/project.dir/include/imgui/imgui_widgets.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mathys/Documents/_Mout/code-vid/include/imgui/imgui_widgets.cpp -o CMakeFiles/project.dir/include/imgui/imgui_widgets.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/include/imgui/imgui_widgets.cpp -o CMakeFiles/project.dir/include/imgui/imgui_widgets.cpp.s
 
 CMakeFiles/project.dir/include/imgui/backends/imgui_impl_glfw.cpp.o: CMakeFiles/project.dir/flags.make
-CMakeFiles/project.dir/include/imgui/backends/imgui_impl_glfw.cpp.o: /Users/mathys/Documents/_Mout/code-vid/include/imgui/backends/imgui_impl_glfw.cpp
+CMakeFiles/project.dir/include/imgui/backends/imgui_impl_glfw.cpp.o: /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/include/imgui/backends/imgui_impl_glfw.cpp
 CMakeFiles/project.dir/include/imgui/backends/imgui_impl_glfw.cpp.o: CMakeFiles/project.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mathys/Documents/_Mout/code-vid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/project.dir/include/imgui/backends/imgui_impl_glfw.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/project.dir/include/imgui/backends/imgui_impl_glfw.cpp.o -MF CMakeFiles/project.dir/include/imgui/backends/imgui_impl_glfw.cpp.o.d -o CMakeFiles/project.dir/include/imgui/backends/imgui_impl_glfw.cpp.o -c /Users/mathys/Documents/_Mout/code-vid/include/imgui/backends/imgui_impl_glfw.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/project.dir/include/imgui/backends/imgui_impl_glfw.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/project.dir/include/imgui/backends/imgui_impl_glfw.cpp.o -MF CMakeFiles/project.dir/include/imgui/backends/imgui_impl_glfw.cpp.o.d -o CMakeFiles/project.dir/include/imgui/backends/imgui_impl_glfw.cpp.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/include/imgui/backends/imgui_impl_glfw.cpp
 
 CMakeFiles/project.dir/include/imgui/backends/imgui_impl_glfw.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/project.dir/include/imgui/backends/imgui_impl_glfw.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mathys/Documents/_Mout/code-vid/include/imgui/backends/imgui_impl_glfw.cpp > CMakeFiles/project.dir/include/imgui/backends/imgui_impl_glfw.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/include/imgui/backends/imgui_impl_glfw.cpp > CMakeFiles/project.dir/include/imgui/backends/imgui_impl_glfw.cpp.i
 
 CMakeFiles/project.dir/include/imgui/backends/imgui_impl_glfw.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/project.dir/include/imgui/backends/imgui_impl_glfw.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mathys/Documents/_Mout/code-vid/include/imgui/backends/imgui_impl_glfw.cpp -o CMakeFiles/project.dir/include/imgui/backends/imgui_impl_glfw.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/include/imgui/backends/imgui_impl_glfw.cpp -o CMakeFiles/project.dir/include/imgui/backends/imgui_impl_glfw.cpp.s
 
 CMakeFiles/project.dir/include/imgui/backends/imgui_impl_opengl3.cpp.o: CMakeFiles/project.dir/flags.make
-CMakeFiles/project.dir/include/imgui/backends/imgui_impl_opengl3.cpp.o: /Users/mathys/Documents/_Mout/code-vid/include/imgui/backends/imgui_impl_opengl3.cpp
+CMakeFiles/project.dir/include/imgui/backends/imgui_impl_opengl3.cpp.o: /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/include/imgui/backends/imgui_impl_opengl3.cpp
 CMakeFiles/project.dir/include/imgui/backends/imgui_impl_opengl3.cpp.o: CMakeFiles/project.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mathys/Documents/_Mout/code-vid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/project.dir/include/imgui/backends/imgui_impl_opengl3.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/project.dir/include/imgui/backends/imgui_impl_opengl3.cpp.o -MF CMakeFiles/project.dir/include/imgui/backends/imgui_impl_opengl3.cpp.o.d -o CMakeFiles/project.dir/include/imgui/backends/imgui_impl_opengl3.cpp.o -c /Users/mathys/Documents/_Mout/code-vid/include/imgui/backends/imgui_impl_opengl3.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/project.dir/include/imgui/backends/imgui_impl_opengl3.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/project.dir/include/imgui/backends/imgui_impl_opengl3.cpp.o -MF CMakeFiles/project.dir/include/imgui/backends/imgui_impl_opengl3.cpp.o.d -o CMakeFiles/project.dir/include/imgui/backends/imgui_impl_opengl3.cpp.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/include/imgui/backends/imgui_impl_opengl3.cpp
 
 CMakeFiles/project.dir/include/imgui/backends/imgui_impl_opengl3.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/project.dir/include/imgui/backends/imgui_impl_opengl3.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mathys/Documents/_Mout/code-vid/include/imgui/backends/imgui_impl_opengl3.cpp > CMakeFiles/project.dir/include/imgui/backends/imgui_impl_opengl3.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/include/imgui/backends/imgui_impl_opengl3.cpp > CMakeFiles/project.dir/include/imgui/backends/imgui_impl_opengl3.cpp.i
 
 CMakeFiles/project.dir/include/imgui/backends/imgui_impl_opengl3.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/project.dir/include/imgui/backends/imgui_impl_opengl3.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mathys/Documents/_Mout/code-vid/include/imgui/backends/imgui_impl_opengl3.cpp -o CMakeFiles/project.dir/include/imgui/backends/imgui_impl_opengl3.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/include/imgui/backends/imgui_impl_opengl3.cpp -o CMakeFiles/project.dir/include/imgui/backends/imgui_impl_opengl3.cpp.s
 
 # Object files for target project
 project_OBJECTS = \
@@ -210,7 +210,7 @@ project: CMakeFiles/project.dir/build.make
 project: /opt/homebrew/lib/libglfw.3.4.dylib
 project: /opt/homebrew/opt/libomp/lib/libomp.dylib
 project: CMakeFiles/project.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/mathys/Documents/_Mout/code-vid/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable project"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable project"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/project.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -222,6 +222,6 @@ CMakeFiles/project.dir/clean:
 .PHONY : CMakeFiles/project.dir/clean
 
 CMakeFiles/project.dir/depend:
-	cd /Users/mathys/Documents/_Mout/code-vid/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/mathys/Documents/_Mout/code-vid /Users/mathys/Documents/_Mout/code-vid /Users/mathys/Documents/_Mout/code-vid/build /Users/mathys/Documents/_Mout/code-vid/build /Users/mathys/Documents/_Mout/code-vid/build/CMakeFiles/project.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/project.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/project.dir/depend
 

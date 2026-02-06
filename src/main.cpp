@@ -141,9 +141,11 @@ int main() {
     int nGreen = 50;
     int nRed   = 50;
 
-    glm::vec3 foyer1( 25.0f, 15.0f, 0.0f);
-    glm::vec3 foyer2( 0.0f, 0.0f, 0.0f);
-    glm::vec3 foyer3(-25.0f, -15.0f, 0.0f);
+    glm::vec3 foyerPos = glm::vec3(0.f, 0.f, 0.f);
+
+    glm::vec3 foyer1( foyerPos.x, foyerPos.y, foyerPos.z);
+    glm::vec3 foyer2( 0.0f, 0.0f, 0.f);
+    glm::vec3 foyer3(-foyerPos.x, -foyerPos.y, foyerPos.z);
 
     // création initiale
     particule.createParticules(foyer1, nBlue, foyer2, nGreen, foyer3, nRed);
@@ -215,10 +217,11 @@ int main() {
         // --- UI ---
         ImGui::Begin("Controls");
 
-        ImGui::Text("FPS: %.1f", 1.0f / (deltaTime > 0.0f ? deltaTime : 1.0f));
+        ImGui::Text("FPS: %f", 1.0f / (deltaTime > 0.0f ? deltaTime : 1.0f));
         ImGui::Text("Iteration par boucle: %d", particule.nombreIteration);
         ImGui::Checkbox("Pause", &pause);
         ImGui::Checkbox("Collision", &particule.collision);
+        ImGui::Checkbox("Dislocation", &particule.enableDislocation);
 
         ImGui::Separator();
 
@@ -238,6 +241,7 @@ int main() {
 
         ImGui::SliderFloat("Force de la souris", &particule.mouseStrength, 20.f, 100.0f);
 
+        ImGui::SliderFloat("Taille du monde:", (float*)&particule.worldSize, 0.0f, 500.0f);
 
         ImGui::Separator();
 
@@ -255,15 +259,23 @@ int main() {
 
 
         ImGui::Separator();
+
+        bool BParticule = false;
+
+        ImGui::SliderFloat("v0", &particule.v0, 0.0f, 3.0f);
+        BParticule |= ImGui::SliderFloat3("Foyer Pos", (float*)&foyerPos, 0.0f, 40.0f);
+
+        ImGui::Separator();
         ImGui::Text("Particles count");
 
-        bool BnombreParticule = false;
-        BnombreParticule |= ImGui::SliderInt("Blue",  &nBlue,  0, 2000);
-        BnombreParticule |= ImGui::SliderInt("Green", &nGreen, 0, 2000);
-        BnombreParticule |= ImGui::SliderInt("Red",   &nRed,   0, 2000);
+        BParticule |= ImGui::SliderInt("Blue",  &nBlue,  0, 2000);
+        BParticule |= ImGui::SliderInt("Green", &nGreen, 0, 2000);
+        BParticule |= ImGui::SliderInt("Red",   &nRed,   0, 2000);
 
-        if (BnombreParticule)
+        if (BParticule)
         {
+            foyer1.x = foyerPos.x; foyer1.y = foyerPos.y; foyer1.z = foyerPos.z;
+            foyer3.x = -foyerPos.x; foyer2.y = -foyerPos.y; foyer2.z = foyerPos.z;
             particule.createParticules(foyer1, nBlue, foyer2, nGreen, foyer3, nRed);
             particule.upload();
         }
@@ -274,12 +286,14 @@ int main() {
 
         ImGui::Separator();
 
-        ImGui::SliderFloat("Taille du monde:", (float*)&particule.worldSize, 0.0f, 500.0f);
+        ImGui::SliderFloat("Break strength", &particule.breakStrength, 0.01f, 2.0f);
+        ImGui::SliderFloat("Frag energy share", &particule.fragEnergyShare, 0.0f, 1.0f);
+        ImGui::SliderInt("Max frags/collision", &particule.maxFragmentsPerCollision, 2, 15);
 
         ImGui::End();
 
         // --- ENERGY ---
-        ImGui::Begin("Energy");
+        ImGui::Begin("Energie");
         ImGui::Text("Energie total: %f", particule.energyTotal);
         ImGui::Separator();
         ImGui::SliderFloat("Zoom", &particule.zoom, 0.5f, 15.0f);
@@ -300,7 +314,9 @@ int main() {
         ImGui::End();
 
         // --- MASS ---
-        ImGui::Begin("Mass");
+        ImGui::Begin("Masse");
+        ImGui::Text("Masse total: %f", particule.massTotal);
+        ImGui::Separator();
         ImGui::SliderFloat("Zoom", &particule.zoom, 0.5f, 15.0f);
 
         ImGui::Text("Colormap XY (worldSize=%.1f)", particule.worldSize);

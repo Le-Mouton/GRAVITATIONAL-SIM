@@ -7,6 +7,9 @@
 #include <random>
 #include <cmath>
 #include <cstddef>
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
 
 struct Vertex
 {
@@ -38,18 +41,13 @@ public:
 	const char* trail_fs = "shader/trail.fs";
 	Shader trailShader;
 
-	// Force positive = attraction, négative = répulsion
-	float K[3][3] = {
-	    /* B */          { 0.f,  2.0f, 2.0f },
-	    /* V */          { 2.0f, 0.0f,  1.0f },
-	    /* R */          {  -1.0f, -1.0f, -1.0f }
-	};
-
 	float M[3] = {
-		20.e8f, 30.e8f, 15.e8f
+		1.e9f, 1.e9f, 1.e9f
 	};
 
 	float zoom = 1.f;
+
+	float v0 = 0.f;
 
 	// --- Trails ---
 	unsigned int trailVBO = 0, trailVAO = 0;
@@ -61,6 +59,7 @@ public:
 	std::vector<TrailGPU> trailGPU;               
 
 	float energyTotal = 0;
+	float massTotal = 0;
 	float worldSize = 40.0f;
 	float mouseStrength = 80.0f;
 	int nombreIteration = 0;
@@ -69,11 +68,36 @@ public:
 
 	bool collision = false;
 
+	// --- Dislocation (tunable) ---
+
+	bool enableDislocation = true;
+
+	float breakStrength = 0.35f;
+	float fragEnergyShare = 0.60f;
+	int   maxFragmentsPerCollision = 8;
+
+	float minMassRatio = 0.1f;
+	float separationFactor = 1.25f;
+
+	std::vector<glm::vec3> acc;
+	std::vector<uint8_t> touched;
 
 	Particules()
 	: shader(shader_vs, shader_fs),
 	  trailShader(trail_vs, trail_fs)
 	{}
+
+	float radiusFromMass(float mass, int type) const
+	{
+	    float baseMass = M[type];
+	    float baseR    = radiusParticule;   // ou 0.1f
+	    float growth   = 0.33f;             // densité constante
+	    float r = baseR * powf(mass / (baseMass + 1e-9f), growth);
+	    return r;
+	}
+
+	glm::vec3 velOf(const Vertex& v) const { return {v.vx, v.vy, v.vz}; }
+	void setVel(Vertex& v, const glm::vec3& w) { v.vx=w.x; v.vy=w.y; v.vz=w.z; }
 
 	void createParticules(glm::vec3 foyer1, int n1,
 	                      glm::vec3 foyer2, int n2,
@@ -86,9 +110,9 @@ public:
 	    std::uniform_real_distribution<float> angleDist(0.0f, 2.0f * 3.1415926535f);
 	    std::uniform_real_distribution<float> radiusDist(5.f, 15.f);
 	    std::uniform_real_distribution<float> jitter(-0.05f, 0.05f);
-	    std::uniform_real_distribution<float> vx0(-2.f, 2.f);
-	    std::uniform_real_distribution<float> vy0(-2.f, 2.f);
-	    std::uniform_real_distribution<float> vz0(-2.f, 2.f);
+	    std::uniform_real_distribution<float> vx0(-v0, v0);
+	    std::uniform_real_distribution<float> vy0(-v0, v0);
+	    std::uniform_real_distribution<float> vz0(-v0, v0);
 
 	    auto spawn = [&](glm::vec3 foyer, int n, int type, float r, float g, float b)
 	    {
@@ -193,10 +217,138 @@ public:
 	    trails   = std::move(newT);
 	}
 
+	static inline float clampf(float x, float a, float b) {
+	    return (x < a) ? a : (x > b ? b : x);
+	}
+
+	bool dislocateTarget(int attacker, int target,
+	                     const glm::vec3& normal,
+	                     float Eimpact,
+	                     int& spawnedThisFrame)
+	{
+	    if (attacker < 0 || target < 0) return false;
+	    if (attacker >= (int)vertices.size() || target >= (int)vertices.size()) return false;
+	    if (!vertices[attacker].alive || !vertices[target].alive) return false;
+
+	    const Vertex A0 = vertices[attacker];
+	    const Vertex B0 = vertices[target];
+
+	    const float G = 6.67e-11f;
+	    float Eb = breakStrength * G * (B0.mass * B0.mass) / (B0.radius + 1e-6f);
+
+	    if (Eimpact <= Eb) return false;
+
+	    float surplus = (Eimpact - Eb) / (Eimpact + Eb + 1e-9f); // [0..1)
+	    float ejectFrac = clampf(surplus, 1e-6f, 0.99f);         // évite 0 et 100%
+
+	    float ejectMass  = B0.mass * ejectFrac;
+	    float remainMass = B0.mass - ejectMass;
+
+	    float minM = minMassRatio * M[B0.type];
+	    if (remainMass < minM) {
+	        ejectMass = B0.mass;
+	        remainMass = 0.0f;
+	    }
+
+	    int n = 2 + (int)std::floor(ejectFrac * (maxFragmentsPerCollision - 2));
+	    n = std::max(2, std::min(maxFragmentsPerCollision, n));
+
+	    float mf = ejectMass / (float)n;
+	    if (mf < minM) {
+	        n = (int)std::floor(ejectMass / minM);
+	        n = std::max(2, std::min(maxFragmentsPerCollision, n));
+	        mf = ejectMass / (float)n;
+	        if (mf < minM) return false;
+	    }
+
+	    const int maxSpawnPerCollision = maxFragmentsPerCollision;
+	    if (spawnedThisFrame + n > maxSpawnPerCollision) return false;
+
+	    float Efrag = fragEnergyShare * (Eimpact - Eb);
+	    if (Efrag < 0.0f) Efrag = 0.0f;
+
+	    float vEject = std::sqrt(2.0f * Efrag / (ejectMass + 1e-9f));
+
+	    glm::vec3 vA0 = velOf(A0);
+	    glm::vec3 vB0 = velOf(B0);
+	    glm::vec3 Pbefore = A0.mass * vA0 + B0.mass * vB0;
+
+	    glm::vec3 vA_after = vA0;
+
+	    // On prépare momentum fragments
+	    glm::vec3 Pfrags(0.0f);
+
+	    static std::mt19937 rng{ std::random_device{}() };
+	    std::uniform_real_distribution<float> jitter(-0.35f, 0.35f);
+
+	    float Br_after = (remainMass > 0.0f) ? radiusFromMass(remainMass, B0.type) : B0.radius;
+
+	    for (int k = 0; k < n; ++k)
+	    {
+	        Vertex f{};
+	        f.alive = 1;
+	        f.type  = B0.type;
+	        f.r = B0.r; f.g = B0.g; f.b = B0.b;
+
+	        f.mass   = mf;
+	        f.radius = radiusFromMass(f.mass, f.type);
+
+	        float safeDist = ((Br_after > 0 ? Br_after : radiusParticule) + f.radius) * separationFactor;
+	        glm::vec3 randOff(jitter(rng), jitter(rng), jitter(rng));
+	        glm::vec3 pos = glm::vec3(B0.x, B0.y, B0.z) + normal * safeDist + randOff;
+
+	        f.x = pos.x; f.y = pos.y; f.z = pos.z;
+
+	        glm::vec3 v = vB0 + 1.f/3.f * normal * vEject + randOff * 0.5f;
+	        setVel(f, v);
+
+	        float vv2 = glm::dot(v, v);
+	        f.energy = 0.5f * f.mass * vv2;
+
+	        vertices.push_back(f);
+	        trails.push_back({});
+	        trails.back().push_back(glm::vec3(f.x, f.y, f.z));
+
+	        Pfrags += f.mass * v;
+	        spawnedThisFrame++;
+	    }
+
+	    if (target < (int)vertices.size() && vertices[target].alive)
+	    {
+	        if (remainMass > 0.0f) {
+	            glm::vec3 vB_after = (Pbefore - A0.mass * vA_after - Pfrags) / (remainMass + 1e-9f);
+
+	            vertices[target].mass = remainMass;
+	            vertices[target].radius = Br_after;
+	            setVel(vertices[target], vB_after);
+	        } else {
+	            vertices[target].alive = 0;
+	        }
+	    }
+
+	    return true;
+	}
+
 
 	void simulate(float dt, bool mouseDown, const glm::vec3& mouseWorld)
 	{
+
+		int N = (int)vertices.size();
+		if ((int)acc.size() < N) acc.resize(N);
+		std::fill(acc.begin(), acc.begin() + N, glm::vec3(0.0f));
+
+		if ((int)touched.size() < N) touched.resize(N);
+		std::fill(touched.begin(), touched.begin() + N, 0);
+
+		const int maxSpawnPerFrame = 512;
+		vertices.reserve(vertices.size() + (size_t)maxSpawnPerFrame);
+		trails.reserve(trails.size() + (size_t)maxSpawnPerFrame);
+
 	    nombreIteration = 0;
+
+		int spawnedThisFrame = 0;
+
+
 	    if (dt <= 0.0f) return;
 
 	    if (dt > 0.02f) dt = 0.02f;
@@ -204,16 +356,16 @@ public:
 	    const float softening = 0.05f;
 	    const float G = 6.67e-11f;
 
-	    int N = (int)vertices.size();
 	    if (N == 0) return;
 
-	    std::vector<glm::vec3> acc(N, glm::vec3(0.0f));
 
 	    energyTotal = 0.0f;
+	    massTotal = 0.0f;
 
 	    for (int i = 0; i < N; ++i)
 	    {
 	        energyTotal += vertices[i].energy;
+	        massTotal += vertices[i].mass;
 
 	        glm::vec3 pi(vertices[i].x, vertices[i].y, vertices[i].z);
 	        float mi = vertices[i].mass;
@@ -312,17 +464,69 @@ public:
 		        float rSum  = vertices[i].radius + vertices[j].radius;
 		        float dist2 = glm::dot(d, d);
 
+		        // if (dist2 <= rSum * rSum && collision)
+		        // {
+		        //     int a = i, b = j;
+
+		        //     float mi = vertices[i].mass;
+		        //     float mj = vertices[j].mass;
+
+		        //     if (mj > mi) { a = j; b = i; }   // absorbeur = plus massif
+
+		        //     mergeBodies(a, b);
+		        // }
+
 		        if (dist2 <= rSum * rSum && collision)
-		        {
-		            int a = i, b = j;
+				{
+				    // // anti-chaîne
+				    // if (vertices[i].noCollideFrames > 0 || vertices[j].noCollideFrames > 0) continue;
+				    // if (vertices[i].collidedThisFrame || vertices[j].collidedThisFrame) continue;
 
-		            float mi = vertices[i].mass;
-		            float mj = vertices[j].mass;
+				    int a = i, b = j;
+				    if (vertices[b].mass > vertices[a].mass) std::swap(a, b); // a = plus massif
 
-		            if (mj > mi) { a = j; b = i; }   // absorbeur = plus massif
+				    Vertex& A = vertices[a];
+				    Vertex& B = vertices[b];
 
-		            mergeBodies(a, b);
-		        }
+				    // normale de collision (pour éjection)
+				    glm::vec3 nrm = glm::normalize(d + glm::vec3(1e-8f)); // d = pj-pi (si i/j)
+				    // si on a swap, assure-toi que nrm pointe de B vers l'extérieur :
+				    glm::vec3 pA(A.x,A.y,A.z), pB(B.x,B.y,B.z);
+				    nrm = glm::normalize(pB - pA);
+				    if (glm::length(nrm) < 1e-12f)
+    					nrm = glm::vec3(1,0,0);
+
+					glm::vec3 vA = velOf(A);
+					glm::vec3 vB = velOf(B);
+					glm::vec3 vRel = vA - vB;
+					float mu = (A.mass * B.mass) / (A.mass + B.mass + 1e-9f);
+
+					float vrel_n = glm::dot(vRel, nrm);
+					if (vrel_n <= 0.0f) {
+					    // pas un impact compressif
+					    continue;
+					}
+
+					bool didDislocate = false;
+
+					float Eimpact = 0.5f * mu * vrel_n * vrel_n;
+
+					// dislocation seulement si B est nettement plus petit
+					float ratio = B.mass / (A.mass + 1e-9f);
+					if (enableDislocation && ratio < 0.25f) {
+					    didDislocate = dislocateTarget(a, b, nrm, Eimpact, spawnedThisFrame);
+					}
+
+				    if (!didDislocate)
+				    {
+				        // fallback merge
+				        mergeBodies(a, b);
+				        //vertices[a].noCollideFrames = collideCooldown;
+				        //vertices[a].collidedThisFrame = 1;
+				    }
+
+				    break; // 1 seul event par i et par frame (anti-explosion)
+				}
 		    }
 		}
 
@@ -332,7 +536,7 @@ public:
 	}
 
 	// --- Heatmaps XY ---
-	int hmW = 512, hmH = 512;
+	int hmW = 256, hmH = 256;
 	GLuint texMass = 0, texEnergy = 0;
 
 	std::vector<float> massGrid;
@@ -340,7 +544,7 @@ public:
 	std::vector<unsigned char> rgbMass;
 	std::vector<unsigned char> rgbEnergy;
 
-	void initHeatmaps(int W=512, int H=512)
+	void initHeatmaps(int W=256, int H=256)
 	{
 	    hmW = W; hmH = H;
 	    massGrid.assign(hmW*hmH, 0.0f);
