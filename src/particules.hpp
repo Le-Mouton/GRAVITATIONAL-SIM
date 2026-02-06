@@ -65,6 +65,10 @@ public:
 	float mouseStrength = 80.0f;
 	int nombreIteration = 0;
 
+	float radiusParticule = 0.09f;
+
+	bool collision = false;
+
 
 	Particules()
 	: shader(shader_vs, shader_fs),
@@ -80,8 +84,11 @@ public:
 
 	    static std::mt19937 rng{ std::random_device{}() };
 	    std::uniform_real_distribution<float> angleDist(0.0f, 2.0f * 3.1415926535f);
-	    std::uniform_real_distribution<float> radiusDist(0.1f, 15.f);
+	    std::uniform_real_distribution<float> radiusDist(5.f, 15.f);
 	    std::uniform_real_distribution<float> jitter(-0.05f, 0.05f);
+	    std::uniform_real_distribution<float> vx0(-2.f, 2.f);
+	    std::uniform_real_distribution<float> vy0(-2.f, 2.f);
+	    std::uniform_real_distribution<float> vz0(-2.f, 2.f);
 
 	    auto spawn = [&](glm::vec3 foyer, int n, int type, float r, float g, float b)
 	    {
@@ -97,11 +104,11 @@ public:
 
 	            v.r = r; v.g = g; v.b = b;
 
-	            v.vx = 0.0f; v.vy = 0.0f; v.vz = 0.0f;
+	            v.vx = vx0(rng); v.vy = vy0(rng); v.vz = vz0(rng);
 	            v.type = type;
 
 	            v.mass = M[type];
-				v.radius = 0.01f;
+				v.radius = radiusParticule;
 				v.alive = 1;
 				v.energy = 0.0f;
 
@@ -119,51 +126,50 @@ public:
 		}
 	}
 
+	void radiusUpdate()
+	{
+		for (size_t i = 0; i < vertices.size(); ++i) {
+			vertices[i].radius = radiusParticule;
+		}
+	}
+
 	void mergeBodies(int a, int b)
 	{
 	    Vertex& A = vertices[a];
 	    Vertex& B = vertices[b];
-
 	    if (!A.alive || !B.alive) return;
 
-	    float m1 = M[A.type];
-	    float m2 = M[B.type];
+	    float m1 = A.mass;
+	    float m2 = B.mass;
 	    float m  = m1 + m2;
 
-	    // position barycentre
 	    A.x = (A.x*m1 + B.x*m2) / m;
 	    A.y = (A.y*m1 + B.y*m2) / m;
 	    A.z = (A.z*m1 + B.z*m2) / m;
 
-	    // vitesse (momentum)
 	    A.vx = (A.vx*m1 + B.vx*m2) / m;
 	    A.vy = (A.vy*m1 + B.vy*m2) / m;
 	    A.vz = (A.vz*m1 + B.vz*m2) / m;
 
-	    // masse
 	    A.mass = m;
 
-	    // rayon: densité constante => V∝m => r∝cbrt(m)
-	    // baseMass = masse d'une particule "typique"
 	    float baseMass = M[A.type];
 	    float baseR    = 0.1f;
-		float growth = 1.0f; // 0.33 = physique densité constante, 0.5 plus visible, 1.0 très arcade
-		A.radius = baseR * powf(A.mass / (baseMass + 1e-9f), growth);
+	    float growth   = 0.33f;
 
-	    // couleur (mélange massique)
+	    float newR = baseR * powf(A.mass / (baseMass + 1e-9f), growth);
+
+	    A.radius = std::max(A.radius, newR);
+
 	    A.r = (A.r*m1 + B.r*m2) / m;
 	    A.g = (A.g*m1 + B.g*m2) / m;
 	    A.b = (A.b*m1 + B.b*m2) / m;
 
-	    // trails: on concatène (et on clamp)
 	    auto& Ta = trails[a];
 	    auto& Tb = trails[b];
 	    Ta.insert(Ta.end(), Tb.begin(), Tb.end());
-	    if ((int)Ta.size() > trailMax) {
-	        Ta.erase(Ta.begin(), Ta.end() - trailMax);
-	    }
+	    if ((int)Ta.size() > trailMax) Ta.erase(Ta.begin(), Ta.end() - trailMax);
 
-	    // kill b
 	    B.alive = 0;
 	}
 
@@ -306,7 +312,7 @@ public:
 		        float rSum  = vertices[i].radius + vertices[j].radius;
 		        float dist2 = glm::dot(d, d);
 
-		        if (dist2 <= rSum * rSum)
+		        if (dist2 <= rSum * rSum && collision)
 		        {
 		            int a = i, b = j;
 

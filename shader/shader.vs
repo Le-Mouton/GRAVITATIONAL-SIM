@@ -25,7 +25,7 @@ void main()
     d = max(d, 1e-3);
 
     float pixelsPerWorld = uViewportH / (2.0 * tan(uFovY * 0.5));
-    float sizePx = (aRadius / d) * pixelsPerWorld * 2.0; // *2 car rayon->diamètre
+    float sizePx = (aRadius / d) * pixelsPerWorld * 2.0;
 
     gl_PointSize = clamp(sizePx, 1.0, 2048.0);
 }

@@ -141,9 +141,9 @@ int main() {
     int nGreen = 50;
     int nRed   = 50;
 
-    glm::vec3 foyer1( 5.0f, 0.0f, 0.0f);
+    glm::vec3 foyer1( 25.0f, 15.0f, 0.0f);
     glm::vec3 foyer2( 0.0f, 0.0f, 0.0f);
-    glm::vec3 foyer3(-5.0f, 0.0f, 0.0f);
+    glm::vec3 foyer3(-25.0f, -15.0f, 0.0f);
 
     // création initiale
     particule.createParticules(foyer1, nBlue, foyer2, nGreen, foyer3, nRed);
@@ -218,14 +218,21 @@ int main() {
         ImGui::Text("FPS: %.1f", 1.0f / (deltaTime > 0.0f ? deltaTime : 1.0f));
         ImGui::Text("Iteration par boucle: %d", particule.nombreIteration);
         ImGui::Checkbox("Pause", &pause);
+        ImGui::Checkbox("Collision", &particule.collision);
 
         ImGui::Separator();
 
         static float pointScale = 10.0f;
-        ImGui::SliderFloat("Point scale", &pointScale, 1.0f, 400.0f);
+        bool BradiusParticule = false;
+        BradiusParticule |= ImGui::SliderFloat("Point scale", &particule.radiusParticule, 0.01f, 0.1f);
 
-        particule.shader.use();
-        particule.shader.setFloat("uPointScale", pointScale);
+        if(BradiusParticule)
+        {
+            particule.radiusUpdate();
+            particule.upload();
+        }
+
+
 
         ImGui::SliderFloat3("Camera Pos", (float*)&cameraPos, 0.0f, 150.0f);
 
@@ -250,15 +257,15 @@ int main() {
         ImGui::Separator();
         ImGui::Text("Particles count");
 
-        bool changed = false;
-        changed |= ImGui::SliderInt("Blue",  &nBlue,  0, 2000);
-        changed |= ImGui::SliderInt("Green", &nGreen, 0, 2000);
-        changed |= ImGui::SliderInt("Red",   &nRed,   0, 2000);
+        bool BnombreParticule = false;
+        BnombreParticule |= ImGui::SliderInt("Blue",  &nBlue,  0, 2000);
+        BnombreParticule |= ImGui::SliderInt("Green", &nGreen, 0, 2000);
+        BnombreParticule |= ImGui::SliderInt("Red",   &nRed,   0, 2000);
 
-        if (changed)
+        if (BnombreParticule)
         {
             particule.createParticules(foyer1, nBlue, foyer2, nGreen, foyer3, nRed);
-            particule.upload(); // remet à jour le buffer GPU avec la nouvelle taille
+            particule.upload();
         }
 
         ImGui::SliderInt("Trail length", &particule.trailMax, 2, 200);
