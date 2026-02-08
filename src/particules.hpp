@@ -71,6 +71,8 @@ public:
 
 	bool collision = true;
 
+	bool mouseEffect = false;
+
 	// --- Dislocation (tunable) ---
 
 	bool enableDislocation = true;
@@ -87,6 +89,47 @@ public:
 
 	size_t gpuCapacityBytes = 0;
 	size_t trailCapacityBytes = 0;
+
+	// --- SATURNE SIMULATION --- 
+
+	struct BodyPreset {
+    std::string name;
+    float mass;      // masse "simulation" (pas en kg SI si tu veux pas)
+    float radius;    // rayon visuel/collision
+    glm::vec3 color;
+	};
+
+	// ----------------------------
+	// REAL DATA (mètres)
+	// ----------------------------
+	 float RsatReal  = 5.8232e7f;
+	 float RinReal   = 7.0e7f;
+	 float RoutReal  = 1.4e8f;
+	 float ThickReal = 2.0e6f;
+
+	// ----------------------------
+	// SCALE automatique
+	// ----------------------------
+	float saturnRadiusU = worldSize * 0.10f;   // 10% du monde (beau visuellement)
+	float scale = saturnRadiusU / RsatReal;
+
+	// ----------------------------
+	// CONVERSION unités simulation
+	// ----------------------------
+	float ringInner     = RinReal   * scale;
+	float ringOuter     = RoutReal  * scale;
+	float ringThickness = ThickReal * scale;
+
+	// masses → on ne garde PAS les vraies masses (sinon instable)
+	float MsatSim = 1.0e12f;
+	float ringMassTotal = (float)(scale * (double)MsatSim);
+
+	BodyPreset saturnPreset = {
+	    "Saturn",
+	    MsatSim,
+	    saturnRadiusU,
+	    {0.85f, 0.78f, 0.60f}
+	};
 
 	Particules()
 	: shader(shader_vs, shader_fs),
@@ -154,6 +197,142 @@ public:
 		for (size_t i = 0; i < vertices.size(); ++i) {
 		    trails[i].push_back(glm::vec3(vertices[i].x, vertices[i].y, vertices[i].z));
 		}
+	}
+
+	static float rand01(std::mt19937& rng) {
+	    static std::uniform_real_distribution<float> U(0.f, 1.f);
+	    return U(rng);
+	}
+
+	// Tirage "power-law" sur [mMin, mMax] : dN/dm ~ m^{-alpha}
+	static float samplePowerLaw(std::mt19937& rng, float mMin, float mMax, float alpha)
+	{
+	    float u = rand01(rng);
+	    if (std::abs(alpha - 1.f) < 1e-6f) {
+	        // cas alpha ~ 1 : log-uniform
+	        return mMin * std::exp(std::log(mMax / mMin) * u);
+	    }
+	    // inversion CDF
+	    float a = 1.f - alpha;
+	    float x1 = std::pow(mMin, a);
+	    float x2 = std::pow(mMax, a);
+	    float x  = x1 + (x2 - x1) * u;
+	    return std::pow(x, 1.f / a);
+	}
+
+	void createSaturnSystem(glm::vec3 center, int nRings)
+	{
+	    vertices.clear();
+	    vertices.reserve(1 + nRings);
+
+	    static std::mt19937 rng{ std::random_device{}() };
+
+	    // Distributions
+	    std::uniform_real_distribution<float> angleDist(0.0f, 2.0f * 3.1415926535f);
+	    std::uniform_real_distribution<float> radDist(ringInner, ringOuter);
+	    std::uniform_real_distribution<float> zDist(-ringThickness, ringThickness);
+	    std::uniform_real_distribution<float> jitterXY(-0.02f, 0.02f);
+
+	    // --- 1) Saturne (corps central) ---
+	    {
+	        Vertex s{};
+	        s.x = center.x; s.y = center.y; s.z = center.z;
+
+	        s.r = saturnPreset.color.r;
+	        s.g = saturnPreset.color.g;
+	        s.b = saturnPreset.color.b;
+
+	        s.vx = 0.f; s.vy = 0.f; s.vz = 0.f;
+	        s.type = 0;                 // type arbitraire
+	        s.mass = saturnPreset.mass; // masse Saturne (ou masse "sim")
+	        s.radius = saturnPreset.radius;
+	        s.alive = 1;
+	        s.energy = 0.0f;
+
+	        vertices.push_back(s);
+	    }
+
+	    // Constante gravitation (celle que tu utilises déjà)
+	    const float G = 6.67e-11f;
+
+	    // --- masses anneaux non uniformes ---
+		std::vector<float> mRaw(nRings);
+		mRaw.reserve(nRings);
+
+		// Paramètres : à ajuster
+		float mMin = ringMassTotal * 1e-6f / std::max(1, nRings); // très petites
+		float mMax = ringMassTotal * 5e-2f / std::max(1, nRings); // quelques "gros"
+		float alpha = 1.8f; // ~ astéroïdes: souvent entre 1.6 et 2.2 (visuel OK)
+
+		double sumRaw = 0.0;
+		for (int i = 0; i < nRings; ++i) {
+		    float m = samplePowerLaw(rng, mMin, mMax, alpha);
+		    mRaw[i] = m;
+		    sumRaw += (double)m;
+		}
+
+		// Renormalisation pour que somme(m) = ringMassTotal
+		float scaleM = (sumRaw > 0.0) ? (ringMassTotal / (float)sumRaw) : 0.0f;
+
+	    // --- 2) Anneaux : particules en orbite quasi circulaire ---
+	    for (int i = 0; i < nRings; ++i)
+	    {
+	        float a  = angleDist(rng);
+	        float rr = radDist(rng);
+
+	        // position dans un disque (plan XY)
+	        float x = center.x + rr * std::cos(a) + jitterXY(rng);
+	        float y = center.y + rr * std::sin(a) + jitterXY(rng);
+	        float z = center.z + zDist(rng);
+
+	        // Vitesse orbitale circulaire v = sqrt(G*M/r)
+	        // (si tu es en unités non-SI, ajuste G et masses)
+	        float v = std::sqrt(std::max(0.0f, G * saturnPreset.mass / (rr + 1e-6f)));
+
+	        // direction tangentielle (perpendiculaire au rayon)
+	        float tx = -std::sin(a);
+	        float ty =  std::cos(a);
+
+	        // petite dispersion (anneaux pas parfaitement circulaires)
+	        std::uniform_real_distribution<float> dv(-0.02f*v, 0.02f*v);
+	        float vv = v + dv(rng);
+
+	        Vertex p{};
+	        p.x = x; p.y = y; p.z = z;
+
+	        // couleur anneaux (tu peux faire varier selon rr pour simuler A/B/C)
+	        // exemple simple : plus clair vers l'extérieur
+	        float t = (rr - ringInner) / (ringOuter - ringInner + 1e-9f);
+	        p.r = 0.8f + 0.15f * t;
+	        p.g = 0.8f + 0.15f * t;
+	        p.b = 0.85f + 0.10f * t;
+
+	        p.vx = vv * tx;
+	        p.vy = vv * ty;
+	        p.vz = 0.0f;
+
+	        p.type = 1;
+	        p.alive = 1;
+
+	        // masse par particule (répartie sur nRings)
+	        p.mass = mRaw[i] * scaleM;
+
+			float mRef = ringMassTotal / (float)std::max(1, nRings);
+			float k = radiusParticule / std::cbrt(std::max(mRef, 1e-12f));
+			p.radius = k * std::cbrt(std::max(p.mass, 1e-12f));
+
+			// clamp pour éviter des monstres / invisibles
+			p.radius = std::max(0.25f * radiusParticule, std::min(3.0f * radiusParticule, p.radius));
+
+	        p.energy = 0.5f * p.mass * (p.vx*p.vx + p.vy*p.vy + p.vz*p.vz);
+
+	        vertices.push_back(p);
+	    }
+
+	    // Trails
+	    trails.assign(vertices.size(), {});
+	    for (size_t i = 0; i < vertices.size(); ++i)
+	        trails[i].push_back(glm::vec3(vertices[i].x, vertices[i].y, vertices[i].z));
 	}
 
 	void radiusUpdate()
@@ -398,7 +577,7 @@ public:
 		    acc[i] = glm::vec3(axi, ayi, azi);
 		}
 
-		if (mouseDown)
+		if (mouseDown && mouseEffect)
 		{
 		    const float mouseSoft = 0.10f;
 
@@ -664,11 +843,19 @@ public:
 
 	void renderTrails()
 	{
-	    trailGPU.clear();
-	    trailGPU.reserve(vertices.size() * trailMax * 2);
+	    if (trailVAO == 0 || trailVBO == 0) return;
 
-	    for (size_t i = 0; i < vertices.size(); ++i)
+	    // IMPORTANT : évite out-of-range si trails pas synchro
+	    size_t n = std::min(vertices.size(), trails.size());
+	    if (n == 0) return;
+
+	    trailGPU.clear();
+	    trailGPU.reserve(n * (size_t)trailMax * 2);
+
+	    for (size_t i = 0; i < n; ++i)
 	    {
+	        if (!vertices[i].alive) continue;
+
 	        const auto& tr = trails[i];
 	        if (tr.size() < 2) continue;
 
@@ -677,27 +864,29 @@ public:
 	        for (size_t k = 1; k < tr.size(); ++k)
 	        {
 	            float t = (float)k / (float)(tr.size() - 1);
-	            float a = trailAlpha * t;                      
+	            float a = trailAlpha * t;
 
 	            const glm::vec3& p0 = tr[k-1];
 	            const glm::vec3& p1 = tr[k];
 
-	            trailGPU.push_back({p0.x, p0.y, p0.z, cr, cg, cb, a});
-	            trailGPU.push_back({p1.x, p1.y, p1.z, cr, cg, cb, a});
+	            trailGPU.push_back({p0.x,p0.y,p0.z, cr,cg,cb, a});
+	            trailGPU.push_back({p1.x,p1.y,p1.z, cr,cg,cb, a});
 	        }
 	    }
 
 	    glLineWidth(trailWidth);
 
 	    glBindVertexArray(trailVAO);
-		glBindBuffer(GL_ARRAY_BUFFER, trailVBO);
-		size_t bytes = trailGPU.size() * sizeof(TrailGPU);
+	    glBindBuffer(GL_ARRAY_BUFFER, trailVBO);
 
-		if (bytes > trailCapacityBytes) {
-		    trailCapacityBytes = std::max(bytes, trailCapacityBytes * 2 + 1024);
-		    glBufferData(GL_ARRAY_BUFFER, trailCapacityBytes, nullptr, GL_DYNAMIC_DRAW);
-		}
-		glBufferSubData(GL_ARRAY_BUFFER, 0, bytes, trailGPU.data());
+	    size_t bytes = trailGPU.size() * sizeof(TrailGPU);
+	    if (bytes == 0) { glBindVertexArray(0); return; }
+
+	    if (bytes > trailCapacityBytes) {
+	        trailCapacityBytes = std::max(bytes, trailCapacityBytes * 2 + 1024);
+	        glBufferData(GL_ARRAY_BUFFER, trailCapacityBytes, nullptr, GL_DYNAMIC_DRAW);
+	    }
+	    glBufferSubData(GL_ARRAY_BUFFER, 0, bytes, trailGPU.data());
 
 	    glDrawArrays(GL_LINES, 0, (GLsizei)trailGPU.size());
 

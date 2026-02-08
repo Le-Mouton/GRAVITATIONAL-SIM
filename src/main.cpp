@@ -149,6 +149,7 @@ int main() {
 
     // création initiale
     particule.createParticules(foyer1, nBlue, foyer2, nGreen, foyer3, nRed);
+    //particule.createSaturnSystem(glm::vec3(0,0,0), 1000);
     particule.renderInit();
     particule.initHeatmaps(256, 256);
 
@@ -221,6 +222,7 @@ int main() {
         ImGui::Checkbox("Pause", &pause);
         ImGui::Checkbox("Collision", &particule.collision);
         ImGui::Checkbox("Dislocation", &particule.enableDislocation);
+        ImGui::Checkbox("Souris attracteur", &particule.mouseEffect);
 
         ImGui::Separator();
 

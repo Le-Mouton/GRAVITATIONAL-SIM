@@ -1820,3 +1820,2889 @@ events:
         
       exitCode: 2
 ...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting C OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-BdelYv"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-BdelYv"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_C_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-BdelYv'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_b60dd/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_b60dd.dir/build.make CMakeFiles/cmTC_b60dd.dir/build
+        Building C object CMakeFiles/cmTC_b60dd.dir/OpenMPTryFlag.c.o
+        /usr/bin/cc   -Xclang -fopenmp -arch arm64 -MD -MT CMakeFiles/cmTC_b60dd.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_b60dd.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_b60dd.dir/OpenMPTryFlag.c.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-BdelYv/OpenMPTryFlag.c
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-BdelYv/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_b60dd.dir/OpenMPTryFlag.c.o] Error 1
+        make: *** [cmTC_b60dd/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting CXX OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-jLjv1C"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-jLjv1C"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_CXX_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-jLjv1C'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_9e40c/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_9e40c.dir/build.make CMakeFiles/cmTC_9e40c.dir/build
+        Building CXX object CMakeFiles/cmTC_9e40c.dir/OpenMPTryFlag.cpp.o
+        /usr/bin/c++   -Xclang -fopenmp -std=gnu++20 -arch arm64 -MD -MT CMakeFiles/cmTC_9e40c.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_9e40c.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_9e40c.dir/OpenMPTryFlag.cpp.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-jLjv1C/OpenMPTryFlag.cpp
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-jLjv1C/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_9e40c.dir/OpenMPTryFlag.cpp.o] Error 1
+        make: *** [cmTC_9e40c/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting C OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-wmhrAI"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-wmhrAI"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_C_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-wmhrAI'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_b975a/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_b975a.dir/build.make CMakeFiles/cmTC_b975a.dir/build
+        Building C object CMakeFiles/cmTC_b975a.dir/OpenMPTryFlag.c.o
+        /usr/bin/cc   -Xclang -fopenmp -arch arm64 -MD -MT CMakeFiles/cmTC_b975a.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_b975a.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_b975a.dir/OpenMPTryFlag.c.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-wmhrAI/OpenMPTryFlag.c
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-wmhrAI/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_b975a.dir/OpenMPTryFlag.c.o] Error 1
+        make: *** [cmTC_b975a/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting CXX OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-9rrTAT"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-9rrTAT"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_CXX_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-9rrTAT'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_c2091/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_c2091.dir/build.make CMakeFiles/cmTC_c2091.dir/build
+        Building CXX object CMakeFiles/cmTC_c2091.dir/OpenMPTryFlag.cpp.o
+        /usr/bin/c++   -Xclang -fopenmp -std=gnu++20 -arch arm64 -MD -MT CMakeFiles/cmTC_c2091.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_c2091.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_c2091.dir/OpenMPTryFlag.cpp.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-9rrTAT/OpenMPTryFlag.cpp
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-9rrTAT/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_c2091.dir/OpenMPTryFlag.cpp.o] Error 1
+        make: *** [cmTC_c2091/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting C OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-TLCykW"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-TLCykW"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_C_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-TLCykW'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_fe70e/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_fe70e.dir/build.make CMakeFiles/cmTC_fe70e.dir/build
+        Building C object CMakeFiles/cmTC_fe70e.dir/OpenMPTryFlag.c.o
+        /usr/bin/cc   -Xclang -fopenmp -arch arm64 -MD -MT CMakeFiles/cmTC_fe70e.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_fe70e.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_fe70e.dir/OpenMPTryFlag.c.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-TLCykW/OpenMPTryFlag.c
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-TLCykW/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_fe70e.dir/OpenMPTryFlag.c.o] Error 1
+        make: *** [cmTC_fe70e/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting CXX OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-wJtUiX"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-wJtUiX"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_CXX_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-wJtUiX'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_910b1/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_910b1.dir/build.make CMakeFiles/cmTC_910b1.dir/build
+        Building CXX object CMakeFiles/cmTC_910b1.dir/OpenMPTryFlag.cpp.o
+        /usr/bin/c++   -Xclang -fopenmp -std=gnu++20 -arch arm64 -MD -MT CMakeFiles/cmTC_910b1.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_910b1.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_910b1.dir/OpenMPTryFlag.cpp.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-wJtUiX/OpenMPTryFlag.cpp
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-wJtUiX/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_910b1.dir/OpenMPTryFlag.cpp.o] Error 1
+        make: *** [cmTC_910b1/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting C OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-SkAiQ5"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-SkAiQ5"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_C_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-SkAiQ5'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_e9dc8/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_e9dc8.dir/build.make CMakeFiles/cmTC_e9dc8.dir/build
+        Building C object CMakeFiles/cmTC_e9dc8.dir/OpenMPTryFlag.c.o
+        /usr/bin/cc   -Xclang -fopenmp -arch arm64 -MD -MT CMakeFiles/cmTC_e9dc8.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_e9dc8.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_e9dc8.dir/OpenMPTryFlag.c.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-SkAiQ5/OpenMPTryFlag.c
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-SkAiQ5/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_e9dc8.dir/OpenMPTryFlag.c.o] Error 1
+        make: *** [cmTC_e9dc8/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting CXX OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-Af7CUK"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-Af7CUK"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_CXX_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-Af7CUK'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_e7229/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_e7229.dir/build.make CMakeFiles/cmTC_e7229.dir/build
+        Building CXX object CMakeFiles/cmTC_e7229.dir/OpenMPTryFlag.cpp.o
+        /usr/bin/c++   -Xclang -fopenmp -std=gnu++20 -arch arm64 -MD -MT CMakeFiles/cmTC_e7229.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_e7229.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_e7229.dir/OpenMPTryFlag.cpp.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-Af7CUK/OpenMPTryFlag.cpp
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-Af7CUK/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_e7229.dir/OpenMPTryFlag.cpp.o] Error 1
+        make: *** [cmTC_e7229/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting C OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-RRz9RP"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-RRz9RP"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_C_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-RRz9RP'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_71f84/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_71f84.dir/build.make CMakeFiles/cmTC_71f84.dir/build
+        Building C object CMakeFiles/cmTC_71f84.dir/OpenMPTryFlag.c.o
+        /usr/bin/cc   -Xclang -fopenmp -arch arm64 -MD -MT CMakeFiles/cmTC_71f84.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_71f84.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_71f84.dir/OpenMPTryFlag.c.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-RRz9RP/OpenMPTryFlag.c
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-RRz9RP/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_71f84.dir/OpenMPTryFlag.c.o] Error 1
+        make: *** [cmTC_71f84/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting CXX OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-hiFv2p"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-hiFv2p"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_CXX_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-hiFv2p'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_47944/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_47944.dir/build.make CMakeFiles/cmTC_47944.dir/build
+        Building CXX object CMakeFiles/cmTC_47944.dir/OpenMPTryFlag.cpp.o
+        /usr/bin/c++   -Xclang -fopenmp -std=gnu++20 -arch arm64 -MD -MT CMakeFiles/cmTC_47944.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_47944.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_47944.dir/OpenMPTryFlag.cpp.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-hiFv2p/OpenMPTryFlag.cpp
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-hiFv2p/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_47944.dir/OpenMPTryFlag.cpp.o] Error 1
+        make: *** [cmTC_47944/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting C OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-gjj37l"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-gjj37l"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_C_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-gjj37l'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_e62a5/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_e62a5.dir/build.make CMakeFiles/cmTC_e62a5.dir/build
+        Building C object CMakeFiles/cmTC_e62a5.dir/OpenMPTryFlag.c.o
+        /usr/bin/cc   -Xclang -fopenmp -arch arm64 -MD -MT CMakeFiles/cmTC_e62a5.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_e62a5.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_e62a5.dir/OpenMPTryFlag.c.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-gjj37l/OpenMPTryFlag.c
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-gjj37l/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_e62a5.dir/OpenMPTryFlag.c.o] Error 1
+        make: *** [cmTC_e62a5/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting CXX OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-iYTGym"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-iYTGym"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_CXX_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-iYTGym'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_438cd/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_438cd.dir/build.make CMakeFiles/cmTC_438cd.dir/build
+        Building CXX object CMakeFiles/cmTC_438cd.dir/OpenMPTryFlag.cpp.o
+        /usr/bin/c++   -Xclang -fopenmp -std=gnu++20 -arch arm64 -MD -MT CMakeFiles/cmTC_438cd.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_438cd.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_438cd.dir/OpenMPTryFlag.cpp.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-iYTGym/OpenMPTryFlag.cpp
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-iYTGym/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_438cd.dir/OpenMPTryFlag.cpp.o] Error 1
+        make: *** [cmTC_438cd/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting C OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-KxZcUI"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-KxZcUI"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_C_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-KxZcUI'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_2e246/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_2e246.dir/build.make CMakeFiles/cmTC_2e246.dir/build
+        Building C object CMakeFiles/cmTC_2e246.dir/OpenMPTryFlag.c.o
+        /usr/bin/cc   -Xclang -fopenmp -arch arm64 -MD -MT CMakeFiles/cmTC_2e246.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_2e246.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_2e246.dir/OpenMPTryFlag.c.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-KxZcUI/OpenMPTryFlag.c
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-KxZcUI/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_2e246.dir/OpenMPTryFlag.c.o] Error 1
+        make: *** [cmTC_2e246/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting CXX OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-cYwzte"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-cYwzte"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_CXX_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-cYwzte'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_c552c/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_c552c.dir/build.make CMakeFiles/cmTC_c552c.dir/build
+        Building CXX object CMakeFiles/cmTC_c552c.dir/OpenMPTryFlag.cpp.o
+        /usr/bin/c++   -Xclang -fopenmp -std=gnu++20 -arch arm64 -MD -MT CMakeFiles/cmTC_c552c.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_c552c.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_c552c.dir/OpenMPTryFlag.cpp.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-cYwzte/OpenMPTryFlag.cpp
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-cYwzte/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_c552c.dir/OpenMPTryFlag.cpp.o] Error 1
+        make: *** [cmTC_c552c/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting C OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-nyDas7"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-nyDas7"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_C_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-nyDas7'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_7be8c/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_7be8c.dir/build.make CMakeFiles/cmTC_7be8c.dir/build
+        Building C object CMakeFiles/cmTC_7be8c.dir/OpenMPTryFlag.c.o
+        /usr/bin/cc   -Xclang -fopenmp -arch arm64 -MD -MT CMakeFiles/cmTC_7be8c.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_7be8c.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_7be8c.dir/OpenMPTryFlag.c.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-nyDas7/OpenMPTryFlag.c
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-nyDas7/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_7be8c.dir/OpenMPTryFlag.c.o] Error 1
+        make: *** [cmTC_7be8c/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting CXX OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-uEE4Rt"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-uEE4Rt"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_CXX_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-uEE4Rt'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_4ba73/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_4ba73.dir/build.make CMakeFiles/cmTC_4ba73.dir/build
+        Building CXX object CMakeFiles/cmTC_4ba73.dir/OpenMPTryFlag.cpp.o
+        /usr/bin/c++   -Xclang -fopenmp -std=gnu++20 -arch arm64 -MD -MT CMakeFiles/cmTC_4ba73.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_4ba73.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_4ba73.dir/OpenMPTryFlag.cpp.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-uEE4Rt/OpenMPTryFlag.cpp
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-uEE4Rt/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_4ba73.dir/OpenMPTryFlag.cpp.o] Error 1
+        make: *** [cmTC_4ba73/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting C OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-U47HE6"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-U47HE6"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_C_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-U47HE6'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_12a0b/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_12a0b.dir/build.make CMakeFiles/cmTC_12a0b.dir/build
+        Building C object CMakeFiles/cmTC_12a0b.dir/OpenMPTryFlag.c.o
+        /usr/bin/cc   -Xclang -fopenmp -arch arm64 -MD -MT CMakeFiles/cmTC_12a0b.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_12a0b.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_12a0b.dir/OpenMPTryFlag.c.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-U47HE6/OpenMPTryFlag.c
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-U47HE6/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_12a0b.dir/OpenMPTryFlag.c.o] Error 1
+        make: *** [cmTC_12a0b/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting CXX OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-NsbYVX"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-NsbYVX"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_CXX_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-NsbYVX'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_65ae6/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_65ae6.dir/build.make CMakeFiles/cmTC_65ae6.dir/build
+        Building CXX object CMakeFiles/cmTC_65ae6.dir/OpenMPTryFlag.cpp.o
+        /usr/bin/c++   -Xclang -fopenmp -std=gnu++20 -arch arm64 -MD -MT CMakeFiles/cmTC_65ae6.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_65ae6.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_65ae6.dir/OpenMPTryFlag.cpp.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-NsbYVX/OpenMPTryFlag.cpp
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-NsbYVX/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_65ae6.dir/OpenMPTryFlag.cpp.o] Error 1
+        make: *** [cmTC_65ae6/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting C OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-tPAXSY"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-tPAXSY"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_C_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-tPAXSY'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_ca14c/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_ca14c.dir/build.make CMakeFiles/cmTC_ca14c.dir/build
+        Building C object CMakeFiles/cmTC_ca14c.dir/OpenMPTryFlag.c.o
+        /usr/bin/cc   -Xclang -fopenmp -arch arm64 -MD -MT CMakeFiles/cmTC_ca14c.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_ca14c.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_ca14c.dir/OpenMPTryFlag.c.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-tPAXSY/OpenMPTryFlag.c
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-tPAXSY/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_ca14c.dir/OpenMPTryFlag.c.o] Error 1
+        make: *** [cmTC_ca14c/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting CXX OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-wMAYBl"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-wMAYBl"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_CXX_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-wMAYBl'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_ad72f/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_ad72f.dir/build.make CMakeFiles/cmTC_ad72f.dir/build
+        Building CXX object CMakeFiles/cmTC_ad72f.dir/OpenMPTryFlag.cpp.o
+        /usr/bin/c++   -Xclang -fopenmp -std=gnu++20 -arch arm64 -MD -MT CMakeFiles/cmTC_ad72f.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_ad72f.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_ad72f.dir/OpenMPTryFlag.cpp.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-wMAYBl/OpenMPTryFlag.cpp
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-wMAYBl/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_ad72f.dir/OpenMPTryFlag.cpp.o] Error 1
+        make: *** [cmTC_ad72f/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting C OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-d06XUD"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-d06XUD"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_C_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-d06XUD'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_fb571/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_fb571.dir/build.make CMakeFiles/cmTC_fb571.dir/build
+        Building C object CMakeFiles/cmTC_fb571.dir/OpenMPTryFlag.c.o
+        /usr/bin/cc   -Xclang -fopenmp -arch arm64 -MD -MT CMakeFiles/cmTC_fb571.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_fb571.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_fb571.dir/OpenMPTryFlag.c.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-d06XUD/OpenMPTryFlag.c
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-d06XUD/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_fb571.dir/OpenMPTryFlag.c.o] Error 1
+        make: *** [cmTC_fb571/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting CXX OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-fr28hg"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-fr28hg"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_CXX_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-fr28hg'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_9a822/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_9a822.dir/build.make CMakeFiles/cmTC_9a822.dir/build
+        Building CXX object CMakeFiles/cmTC_9a822.dir/OpenMPTryFlag.cpp.o
+        /usr/bin/c++   -Xclang -fopenmp -std=gnu++20 -arch arm64 -MD -MT CMakeFiles/cmTC_9a822.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_9a822.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_9a822.dir/OpenMPTryFlag.cpp.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-fr28hg/OpenMPTryFlag.cpp
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-fr28hg/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_9a822.dir/OpenMPTryFlag.cpp.o] Error 1
+        make: *** [cmTC_9a822/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting C OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-YBwpTV"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-YBwpTV"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_C_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-YBwpTV'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_49f5b/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_49f5b.dir/build.make CMakeFiles/cmTC_49f5b.dir/build
+        Building C object CMakeFiles/cmTC_49f5b.dir/OpenMPTryFlag.c.o
+        /usr/bin/cc   -Xclang -fopenmp -arch arm64 -MD -MT CMakeFiles/cmTC_49f5b.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_49f5b.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_49f5b.dir/OpenMPTryFlag.c.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-YBwpTV/OpenMPTryFlag.c
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-YBwpTV/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_49f5b.dir/OpenMPTryFlag.c.o] Error 1
+        make: *** [cmTC_49f5b/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting CXX OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-3XHv2s"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-3XHv2s"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_CXX_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-3XHv2s'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_826db/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_826db.dir/build.make CMakeFiles/cmTC_826db.dir/build
+        Building CXX object CMakeFiles/cmTC_826db.dir/OpenMPTryFlag.cpp.o
+        /usr/bin/c++   -Xclang -fopenmp -std=gnu++20 -arch arm64 -MD -MT CMakeFiles/cmTC_826db.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_826db.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_826db.dir/OpenMPTryFlag.cpp.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-3XHv2s/OpenMPTryFlag.cpp
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-3XHv2s/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_826db.dir/OpenMPTryFlag.cpp.o] Error 1
+        make: *** [cmTC_826db/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting C OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-l7oVCb"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-l7oVCb"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_C_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-l7oVCb'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_8c721/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_8c721.dir/build.make CMakeFiles/cmTC_8c721.dir/build
+        Building C object CMakeFiles/cmTC_8c721.dir/OpenMPTryFlag.c.o
+        /usr/bin/cc   -Xclang -fopenmp -arch arm64 -MD -MT CMakeFiles/cmTC_8c721.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_8c721.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_8c721.dir/OpenMPTryFlag.c.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-l7oVCb/OpenMPTryFlag.c
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-l7oVCb/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_8c721.dir/OpenMPTryFlag.c.o] Error 1
+        make: *** [cmTC_8c721/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting CXX OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-8kvmTM"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-8kvmTM"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_CXX_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-8kvmTM'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_d72c0/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_d72c0.dir/build.make CMakeFiles/cmTC_d72c0.dir/build
+        Building CXX object CMakeFiles/cmTC_d72c0.dir/OpenMPTryFlag.cpp.o
+        /usr/bin/c++   -Xclang -fopenmp -std=gnu++20 -arch arm64 -MD -MT CMakeFiles/cmTC_d72c0.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_d72c0.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_d72c0.dir/OpenMPTryFlag.cpp.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-8kvmTM/OpenMPTryFlag.cpp
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-8kvmTM/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_d72c0.dir/OpenMPTryFlag.cpp.o] Error 1
+        make: *** [cmTC_d72c0/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting C OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-nlnexD"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-nlnexD"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_C_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-nlnexD'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_590fb/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_590fb.dir/build.make CMakeFiles/cmTC_590fb.dir/build
+        Building C object CMakeFiles/cmTC_590fb.dir/OpenMPTryFlag.c.o
+        /usr/bin/cc   -Xclang -fopenmp -arch arm64 -MD -MT CMakeFiles/cmTC_590fb.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_590fb.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_590fb.dir/OpenMPTryFlag.c.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-nlnexD/OpenMPTryFlag.c
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-nlnexD/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_590fb.dir/OpenMPTryFlag.c.o] Error 1
+        make: *** [cmTC_590fb/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting CXX OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-7sY9ws"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-7sY9ws"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_CXX_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-7sY9ws'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_5a093/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_5a093.dir/build.make CMakeFiles/cmTC_5a093.dir/build
+        Building CXX object CMakeFiles/cmTC_5a093.dir/OpenMPTryFlag.cpp.o
+        /usr/bin/c++   -Xclang -fopenmp -std=gnu++20 -arch arm64 -MD -MT CMakeFiles/cmTC_5a093.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_5a093.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_5a093.dir/OpenMPTryFlag.cpp.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-7sY9ws/OpenMPTryFlag.cpp
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-7sY9ws/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_5a093.dir/OpenMPTryFlag.cpp.o] Error 1
+        make: *** [cmTC_5a093/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting C OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-oWuDKM"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-oWuDKM"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_C_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-oWuDKM'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_8506f/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_8506f.dir/build.make CMakeFiles/cmTC_8506f.dir/build
+        Building C object CMakeFiles/cmTC_8506f.dir/OpenMPTryFlag.c.o
+        /usr/bin/cc   -Xclang -fopenmp -arch arm64 -MD -MT CMakeFiles/cmTC_8506f.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_8506f.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_8506f.dir/OpenMPTryFlag.c.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-oWuDKM/OpenMPTryFlag.c
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-oWuDKM/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_8506f.dir/OpenMPTryFlag.c.o] Error 1
+        make: *** [cmTC_8506f/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting CXX OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-AtTviP"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-AtTviP"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_CXX_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-AtTviP'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_8987a/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_8987a.dir/build.make CMakeFiles/cmTC_8987a.dir/build
+        Building CXX object CMakeFiles/cmTC_8987a.dir/OpenMPTryFlag.cpp.o
+        /usr/bin/c++   -Xclang -fopenmp -std=gnu++20 -arch arm64 -MD -MT CMakeFiles/cmTC_8987a.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_8987a.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_8987a.dir/OpenMPTryFlag.cpp.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-AtTviP/OpenMPTryFlag.cpp
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-AtTviP/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_8987a.dir/OpenMPTryFlag.cpp.o] Error 1
+        make: *** [cmTC_8987a/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting C OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-JbsUs0"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-JbsUs0"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_C_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-JbsUs0'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_ace76/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_ace76.dir/build.make CMakeFiles/cmTC_ace76.dir/build
+        Building C object CMakeFiles/cmTC_ace76.dir/OpenMPTryFlag.c.o
+        /usr/bin/cc   -Xclang -fopenmp -arch arm64 -MD -MT CMakeFiles/cmTC_ace76.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_ace76.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_ace76.dir/OpenMPTryFlag.c.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-JbsUs0/OpenMPTryFlag.c
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-JbsUs0/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_ace76.dir/OpenMPTryFlag.c.o] Error 1
+        make: *** [cmTC_ace76/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting CXX OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-iGDB00"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-iGDB00"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_CXX_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-iGDB00'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_fc021/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_fc021.dir/build.make CMakeFiles/cmTC_fc021.dir/build
+        Building CXX object CMakeFiles/cmTC_fc021.dir/OpenMPTryFlag.cpp.o
+        /usr/bin/c++   -Xclang -fopenmp -std=gnu++20 -arch arm64 -MD -MT CMakeFiles/cmTC_fc021.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_fc021.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_fc021.dir/OpenMPTryFlag.cpp.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-iGDB00/OpenMPTryFlag.cpp
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-iGDB00/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_fc021.dir/OpenMPTryFlag.cpp.o] Error 1
+        make: *** [cmTC_fc021/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting C OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-ODZv3u"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-ODZv3u"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_C_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-ODZv3u'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_51239/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_51239.dir/build.make CMakeFiles/cmTC_51239.dir/build
+        Building C object CMakeFiles/cmTC_51239.dir/OpenMPTryFlag.c.o
+        /usr/bin/cc   -Xclang -fopenmp -arch arm64 -MD -MT CMakeFiles/cmTC_51239.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_51239.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_51239.dir/OpenMPTryFlag.c.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-ODZv3u/OpenMPTryFlag.c
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-ODZv3u/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_51239.dir/OpenMPTryFlag.c.o] Error 1
+        make: *** [cmTC_51239/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting CXX OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-cx3xql"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-cx3xql"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_CXX_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-cx3xql'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_20c9b/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_20c9b.dir/build.make CMakeFiles/cmTC_20c9b.dir/build
+        Building CXX object CMakeFiles/cmTC_20c9b.dir/OpenMPTryFlag.cpp.o
+        /usr/bin/c++   -Xclang -fopenmp -std=gnu++20 -arch arm64 -MD -MT CMakeFiles/cmTC_20c9b.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_20c9b.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_20c9b.dir/OpenMPTryFlag.cpp.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-cx3xql/OpenMPTryFlag.cpp
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-cx3xql/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_20c9b.dir/OpenMPTryFlag.cpp.o] Error 1
+        make: *** [cmTC_20c9b/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting C OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-7hONMQ"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-7hONMQ"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_C_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-7hONMQ'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_b2575/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_b2575.dir/build.make CMakeFiles/cmTC_b2575.dir/build
+        Building C object CMakeFiles/cmTC_b2575.dir/OpenMPTryFlag.c.o
+        /usr/bin/cc   -Xclang -fopenmp -arch arm64 -MD -MT CMakeFiles/cmTC_b2575.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_b2575.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_b2575.dir/OpenMPTryFlag.c.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-7hONMQ/OpenMPTryFlag.c
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-7hONMQ/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_b2575.dir/OpenMPTryFlag.c.o] Error 1
+        make: *** [cmTC_b2575/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting CXX OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-IozRFz"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-IozRFz"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_CXX_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-IozRFz'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_93ac5/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_93ac5.dir/build.make CMakeFiles/cmTC_93ac5.dir/build
+        Building CXX object CMakeFiles/cmTC_93ac5.dir/OpenMPTryFlag.cpp.o
+        /usr/bin/c++   -Xclang -fopenmp -std=gnu++20 -arch arm64 -MD -MT CMakeFiles/cmTC_93ac5.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_93ac5.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_93ac5.dir/OpenMPTryFlag.cpp.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-IozRFz/OpenMPTryFlag.cpp
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-IozRFz/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_93ac5.dir/OpenMPTryFlag.cpp.o] Error 1
+        make: *** [cmTC_93ac5/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting C OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-AzvN5k"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-AzvN5k"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_C_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-AzvN5k'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_22955/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_22955.dir/build.make CMakeFiles/cmTC_22955.dir/build
+        Building C object CMakeFiles/cmTC_22955.dir/OpenMPTryFlag.c.o
+        /usr/bin/cc   -Xclang -fopenmp -arch arm64 -MD -MT CMakeFiles/cmTC_22955.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_22955.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_22955.dir/OpenMPTryFlag.c.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-AzvN5k/OpenMPTryFlag.c
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-AzvN5k/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_22955.dir/OpenMPTryFlag.c.o] Error 1
+        make: *** [cmTC_22955/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting CXX OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-pMjgQG"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-pMjgQG"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_CXX_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-pMjgQG'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_ddb1e/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_ddb1e.dir/build.make CMakeFiles/cmTC_ddb1e.dir/build
+        Building CXX object CMakeFiles/cmTC_ddb1e.dir/OpenMPTryFlag.cpp.o
+        /usr/bin/c++   -Xclang -fopenmp -std=gnu++20 -arch arm64 -MD -MT CMakeFiles/cmTC_ddb1e.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_ddb1e.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_ddb1e.dir/OpenMPTryFlag.cpp.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-pMjgQG/OpenMPTryFlag.cpp
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-pMjgQG/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_ddb1e.dir/OpenMPTryFlag.cpp.o] Error 1
+        make: *** [cmTC_ddb1e/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting C OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-t9Gxgz"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-t9Gxgz"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_C_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-t9Gxgz'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_1b0cf/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_1b0cf.dir/build.make CMakeFiles/cmTC_1b0cf.dir/build
+        Building C object CMakeFiles/cmTC_1b0cf.dir/OpenMPTryFlag.c.o
+        /usr/bin/cc   -Xclang -fopenmp -arch arm64 -MD -MT CMakeFiles/cmTC_1b0cf.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_1b0cf.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_1b0cf.dir/OpenMPTryFlag.c.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-t9Gxgz/OpenMPTryFlag.c
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-t9Gxgz/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_1b0cf.dir/OpenMPTryFlag.c.o] Error 1
+        make: *** [cmTC_1b0cf/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting CXX OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-GMkUOX"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-GMkUOX"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_CXX_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-GMkUOX'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_db5fb/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_db5fb.dir/build.make CMakeFiles/cmTC_db5fb.dir/build
+        Building CXX object CMakeFiles/cmTC_db5fb.dir/OpenMPTryFlag.cpp.o
+        /usr/bin/c++   -Xclang -fopenmp -std=gnu++20 -arch arm64 -MD -MT CMakeFiles/cmTC_db5fb.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_db5fb.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_db5fb.dir/OpenMPTryFlag.cpp.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-GMkUOX/OpenMPTryFlag.cpp
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-GMkUOX/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_db5fb.dir/OpenMPTryFlag.cpp.o] Error 1
+        make: *** [cmTC_db5fb/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting C OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-NXTJhx"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-NXTJhx"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_C_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-NXTJhx'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_5016b/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_5016b.dir/build.make CMakeFiles/cmTC_5016b.dir/build
+        Building C object CMakeFiles/cmTC_5016b.dir/OpenMPTryFlag.c.o
+        /usr/bin/cc   -Xclang -fopenmp -arch arm64 -MD -MT CMakeFiles/cmTC_5016b.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_5016b.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_5016b.dir/OpenMPTryFlag.c.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-NXTJhx/OpenMPTryFlag.c
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-NXTJhx/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_5016b.dir/OpenMPTryFlag.c.o] Error 1
+        make: *** [cmTC_5016b/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting CXX OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-v46jab"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-v46jab"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_CXX_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-v46jab'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_58965/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_58965.dir/build.make CMakeFiles/cmTC_58965.dir/build
+        Building CXX object CMakeFiles/cmTC_58965.dir/OpenMPTryFlag.cpp.o
+        /usr/bin/c++   -Xclang -fopenmp -std=gnu++20 -arch arm64 -MD -MT CMakeFiles/cmTC_58965.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_58965.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_58965.dir/OpenMPTryFlag.cpp.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-v46jab/OpenMPTryFlag.cpp
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-v46jab/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_58965.dir/OpenMPTryFlag.cpp.o] Error 1
+        make: *** [cmTC_58965/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting C OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-END3Pv"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-END3Pv"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_C_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-END3Pv'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_00310/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_00310.dir/build.make CMakeFiles/cmTC_00310.dir/build
+        Building C object CMakeFiles/cmTC_00310.dir/OpenMPTryFlag.c.o
+        /usr/bin/cc   -Xclang -fopenmp -arch arm64 -MD -MT CMakeFiles/cmTC_00310.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_00310.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_00310.dir/OpenMPTryFlag.c.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-END3Pv/OpenMPTryFlag.c
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-END3Pv/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_00310.dir/OpenMPTryFlag.c.o] Error 1
+        make: *** [cmTC_00310/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting CXX OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-w2AXQ8"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-w2AXQ8"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_CXX_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-w2AXQ8'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_f86e1/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_f86e1.dir/build.make CMakeFiles/cmTC_f86e1.dir/build
+        Building CXX object CMakeFiles/cmTC_f86e1.dir/OpenMPTryFlag.cpp.o
+        /usr/bin/c++   -Xclang -fopenmp -std=gnu++20 -arch arm64 -MD -MT CMakeFiles/cmTC_f86e1.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_f86e1.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_f86e1.dir/OpenMPTryFlag.cpp.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-w2AXQ8/OpenMPTryFlag.cpp
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-w2AXQ8/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_f86e1.dir/OpenMPTryFlag.cpp.o] Error 1
+        make: *** [cmTC_f86e1/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting C OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-LZSVPY"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-LZSVPY"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_C_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-LZSVPY'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_c9480/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_c9480.dir/build.make CMakeFiles/cmTC_c9480.dir/build
+        Building C object CMakeFiles/cmTC_c9480.dir/OpenMPTryFlag.c.o
+        /usr/bin/cc   -Xclang -fopenmp -arch arm64 -MD -MT CMakeFiles/cmTC_c9480.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_c9480.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_c9480.dir/OpenMPTryFlag.c.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-LZSVPY/OpenMPTryFlag.c
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-LZSVPY/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_c9480.dir/OpenMPTryFlag.c.o] Error 1
+        make: *** [cmTC_c9480/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting CXX OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-L4A0Bb"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-L4A0Bb"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_CXX_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-L4A0Bb'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_92b41/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_92b41.dir/build.make CMakeFiles/cmTC_92b41.dir/build
+        Building CXX object CMakeFiles/cmTC_92b41.dir/OpenMPTryFlag.cpp.o
+        /usr/bin/c++   -Xclang -fopenmp -std=gnu++20 -arch arm64 -MD -MT CMakeFiles/cmTC_92b41.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_92b41.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_92b41.dir/OpenMPTryFlag.cpp.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-L4A0Bb/OpenMPTryFlag.cpp
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-L4A0Bb/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_92b41.dir/OpenMPTryFlag.cpp.o] Error 1
+        make: *** [cmTC_92b41/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting C OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-YGYrvU"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-YGYrvU"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_C_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-YGYrvU'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_95ff8/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_95ff8.dir/build.make CMakeFiles/cmTC_95ff8.dir/build
+        Building C object CMakeFiles/cmTC_95ff8.dir/OpenMPTryFlag.c.o
+        /usr/bin/cc   -Xclang -fopenmp -arch arm64 -MD -MT CMakeFiles/cmTC_95ff8.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_95ff8.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_95ff8.dir/OpenMPTryFlag.c.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-YGYrvU/OpenMPTryFlag.c
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-YGYrvU/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_95ff8.dir/OpenMPTryFlag.c.o] Error 1
+        make: *** [cmTC_95ff8/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting CXX OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-HUw2cA"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-HUw2cA"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_CXX_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-HUw2cA'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_933be/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_933be.dir/build.make CMakeFiles/cmTC_933be.dir/build
+        Building CXX object CMakeFiles/cmTC_933be.dir/OpenMPTryFlag.cpp.o
+        /usr/bin/c++   -Xclang -fopenmp -std=gnu++20 -arch arm64 -MD -MT CMakeFiles/cmTC_933be.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_933be.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_933be.dir/OpenMPTryFlag.cpp.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-HUw2cA/OpenMPTryFlag.cpp
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-HUw2cA/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_933be.dir/OpenMPTryFlag.cpp.o] Error 1
+        make: *** [cmTC_933be/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting C OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-SECYtC"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-SECYtC"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_C_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-SECYtC'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_82f49/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_82f49.dir/build.make CMakeFiles/cmTC_82f49.dir/build
+        Building C object CMakeFiles/cmTC_82f49.dir/OpenMPTryFlag.c.o
+        /usr/bin/cc   -Xclang -fopenmp -arch arm64 -MD -MT CMakeFiles/cmTC_82f49.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_82f49.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_82f49.dir/OpenMPTryFlag.c.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-SECYtC/OpenMPTryFlag.c
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-SECYtC/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_82f49.dir/OpenMPTryFlag.c.o] Error 1
+        make: *** [cmTC_82f49/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting CXX OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-8eWTHr"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-8eWTHr"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_CXX_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-8eWTHr'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_d947c/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_d947c.dir/build.make CMakeFiles/cmTC_d947c.dir/build
+        Building CXX object CMakeFiles/cmTC_d947c.dir/OpenMPTryFlag.cpp.o
+        /usr/bin/c++   -Xclang -fopenmp -std=gnu++20 -arch arm64 -MD -MT CMakeFiles/cmTC_d947c.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_d947c.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_d947c.dir/OpenMPTryFlag.cpp.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-8eWTHr/OpenMPTryFlag.cpp
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-8eWTHr/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_d947c.dir/OpenMPTryFlag.cpp.o] Error 1
+        make: *** [cmTC_d947c/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting C OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-DFHrLS"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-DFHrLS"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_C_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-DFHrLS'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_42683/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_42683.dir/build.make CMakeFiles/cmTC_42683.dir/build
+        Building C object CMakeFiles/cmTC_42683.dir/OpenMPTryFlag.c.o
+        /usr/bin/cc   -Xclang -fopenmp -arch arm64 -MD -MT CMakeFiles/cmTC_42683.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_42683.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_42683.dir/OpenMPTryFlag.c.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-DFHrLS/OpenMPTryFlag.c
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-DFHrLS/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_42683.dir/OpenMPTryFlag.c.o] Error 1
+        make: *** [cmTC_42683/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting CXX OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-tPq7M6"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-tPq7M6"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_CXX_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-tPq7M6'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_d800c/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_d800c.dir/build.make CMakeFiles/cmTC_d800c.dir/build
+        Building CXX object CMakeFiles/cmTC_d800c.dir/OpenMPTryFlag.cpp.o
+        /usr/bin/c++   -Xclang -fopenmp -std=gnu++20 -arch arm64 -MD -MT CMakeFiles/cmTC_d800c.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_d800c.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_d800c.dir/OpenMPTryFlag.cpp.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-tPq7M6/OpenMPTryFlag.cpp
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-tPq7M6/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_d800c.dir/OpenMPTryFlag.cpp.o] Error 1
+        make: *** [cmTC_d800c/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting C OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-HlPQSS"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-HlPQSS"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_C_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-HlPQSS'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_190ae/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_190ae.dir/build.make CMakeFiles/cmTC_190ae.dir/build
+        Building C object CMakeFiles/cmTC_190ae.dir/OpenMPTryFlag.c.o
+        /usr/bin/cc   -Xclang -fopenmp -arch arm64 -MD -MT CMakeFiles/cmTC_190ae.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_190ae.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_190ae.dir/OpenMPTryFlag.c.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-HlPQSS/OpenMPTryFlag.c
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-HlPQSS/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_190ae.dir/OpenMPTryFlag.c.o] Error 1
+        make: *** [cmTC_190ae/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting CXX OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-bgu7zp"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-bgu7zp"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_CXX_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-bgu7zp'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_de084/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_de084.dir/build.make CMakeFiles/cmTC_de084.dir/build
+        Building CXX object CMakeFiles/cmTC_de084.dir/OpenMPTryFlag.cpp.o
+        /usr/bin/c++   -Xclang -fopenmp -std=gnu++20 -arch arm64 -MD -MT CMakeFiles/cmTC_de084.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_de084.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_de084.dir/OpenMPTryFlag.cpp.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-bgu7zp/OpenMPTryFlag.cpp
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-bgu7zp/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_de084.dir/OpenMPTryFlag.cpp.o] Error 1
+        make: *** [cmTC_de084/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting C OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-XBalpA"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-XBalpA"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_C_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-XBalpA'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_353f6/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_353f6.dir/build.make CMakeFiles/cmTC_353f6.dir/build
+        Building C object CMakeFiles/cmTC_353f6.dir/OpenMPTryFlag.c.o
+        /usr/bin/cc   -Xclang -fopenmp -arch arm64 -MD -MT CMakeFiles/cmTC_353f6.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_353f6.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_353f6.dir/OpenMPTryFlag.c.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-XBalpA/OpenMPTryFlag.c
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-XBalpA/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_353f6.dir/OpenMPTryFlag.c.o] Error 1
+        make: *** [cmTC_353f6/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting CXX OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-xugbSj"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-xugbSj"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_CXX_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-xugbSj'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_17ee4/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_17ee4.dir/build.make CMakeFiles/cmTC_17ee4.dir/build
+        Building CXX object CMakeFiles/cmTC_17ee4.dir/OpenMPTryFlag.cpp.o
+        /usr/bin/c++   -Xclang -fopenmp -std=gnu++20 -arch arm64 -MD -MT CMakeFiles/cmTC_17ee4.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_17ee4.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_17ee4.dir/OpenMPTryFlag.cpp.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-xugbSj/OpenMPTryFlag.cpp
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-xugbSj/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_17ee4.dir/OpenMPTryFlag.cpp.o] Error 1
+        make: *** [cmTC_17ee4/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting C OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-GUpcmn"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-GUpcmn"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_C_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-GUpcmn'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_59ecb/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_59ecb.dir/build.make CMakeFiles/cmTC_59ecb.dir/build
+        Building C object CMakeFiles/cmTC_59ecb.dir/OpenMPTryFlag.c.o
+        /usr/bin/cc   -Xclang -fopenmp -arch arm64 -MD -MT CMakeFiles/cmTC_59ecb.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_59ecb.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_59ecb.dir/OpenMPTryFlag.c.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-GUpcmn/OpenMPTryFlag.c
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-GUpcmn/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_59ecb.dir/OpenMPTryFlag.c.o] Error 1
+        make: *** [cmTC_59ecb/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting CXX OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-8RbTE1"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-8RbTE1"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_CXX_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-8RbTE1'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_b6762/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_b6762.dir/build.make CMakeFiles/cmTC_b6762.dir/build
+        Building CXX object CMakeFiles/cmTC_b6762.dir/OpenMPTryFlag.cpp.o
+        /usr/bin/c++   -Xclang -fopenmp -std=gnu++20 -arch arm64 -MD -MT CMakeFiles/cmTC_b6762.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_b6762.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_b6762.dir/OpenMPTryFlag.cpp.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-8RbTE1/OpenMPTryFlag.cpp
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-8RbTE1/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_b6762.dir/OpenMPTryFlag.cpp.o] Error 1
+        make: *** [cmTC_b6762/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting C OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-xlDbyh"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-xlDbyh"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_C_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-xlDbyh'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_657aa/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_657aa.dir/build.make CMakeFiles/cmTC_657aa.dir/build
+        Building C object CMakeFiles/cmTC_657aa.dir/OpenMPTryFlag.c.o
+        /usr/bin/cc   -Xclang -fopenmp -arch arm64 -MD -MT CMakeFiles/cmTC_657aa.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_657aa.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_657aa.dir/OpenMPTryFlag.c.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-xlDbyh/OpenMPTryFlag.c
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-xlDbyh/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_657aa.dir/OpenMPTryFlag.c.o] Error 1
+        make: *** [cmTC_657aa/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting CXX OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-8x028w"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-8x028w"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_CXX_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-8x028w'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_e32ca/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_e32ca.dir/build.make CMakeFiles/cmTC_e32ca.dir/build
+        Building CXX object CMakeFiles/cmTC_e32ca.dir/OpenMPTryFlag.cpp.o
+        /usr/bin/c++   -Xclang -fopenmp -std=gnu++20 -arch arm64 -MD -MT CMakeFiles/cmTC_e32ca.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_e32ca.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_e32ca.dir/OpenMPTryFlag.cpp.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-8x028w/OpenMPTryFlag.cpp
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-8x028w/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_e32ca.dir/OpenMPTryFlag.cpp.o] Error 1
+        make: *** [cmTC_e32ca/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting C OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-UfcUGq"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-UfcUGq"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_C_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-UfcUGq'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_a8779/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_a8779.dir/build.make CMakeFiles/cmTC_a8779.dir/build
+        Building C object CMakeFiles/cmTC_a8779.dir/OpenMPTryFlag.c.o
+        /usr/bin/cc   -Xclang -fopenmp -arch arm64 -MD -MT CMakeFiles/cmTC_a8779.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_a8779.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_a8779.dir/OpenMPTryFlag.c.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-UfcUGq/OpenMPTryFlag.c
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-UfcUGq/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_a8779.dir/OpenMPTryFlag.c.o] Error 1
+        make: *** [cmTC_a8779/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting CXX OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-lIP2Ip"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-lIP2Ip"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_CXX_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-lIP2Ip'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_a5104/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_a5104.dir/build.make CMakeFiles/cmTC_a5104.dir/build
+        Building CXX object CMakeFiles/cmTC_a5104.dir/OpenMPTryFlag.cpp.o
+        /usr/bin/c++   -Xclang -fopenmp -std=gnu++20 -arch arm64 -MD -MT CMakeFiles/cmTC_a5104.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_a5104.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_a5104.dir/OpenMPTryFlag.cpp.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-lIP2Ip/OpenMPTryFlag.cpp
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-lIP2Ip/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_a5104.dir/OpenMPTryFlag.cpp.o] Error 1
+        make: *** [cmTC_a5104/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting C OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-13Vd6J"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-13Vd6J"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_C_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-13Vd6J'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_591d8/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_591d8.dir/build.make CMakeFiles/cmTC_591d8.dir/build
+        Building C object CMakeFiles/cmTC_591d8.dir/OpenMPTryFlag.c.o
+        /usr/bin/cc   -Xclang -fopenmp -arch arm64 -MD -MT CMakeFiles/cmTC_591d8.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_591d8.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_591d8.dir/OpenMPTryFlag.c.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-13Vd6J/OpenMPTryFlag.c
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-13Vd6J/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_591d8.dir/OpenMPTryFlag.c.o] Error 1
+        make: *** [cmTC_591d8/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting CXX OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-OIwTnm"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-OIwTnm"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_CXX_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-OIwTnm'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_d26b2/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_d26b2.dir/build.make CMakeFiles/cmTC_d26b2.dir/build
+        Building CXX object CMakeFiles/cmTC_d26b2.dir/OpenMPTryFlag.cpp.o
+        /usr/bin/c++   -Xclang -fopenmp -std=gnu++20 -arch arm64 -MD -MT CMakeFiles/cmTC_d26b2.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_d26b2.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_d26b2.dir/OpenMPTryFlag.cpp.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-OIwTnm/OpenMPTryFlag.cpp
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-OIwTnm/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_d26b2.dir/OpenMPTryFlag.cpp.o] Error 1
+        make: *** [cmTC_d26b2/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting C OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-RLzi7g"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-RLzi7g"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_C_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-RLzi7g'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_9f24d/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_9f24d.dir/build.make CMakeFiles/cmTC_9f24d.dir/build
+        Building C object CMakeFiles/cmTC_9f24d.dir/OpenMPTryFlag.c.o
+        /usr/bin/cc   -Xclang -fopenmp -arch arm64 -MD -MT CMakeFiles/cmTC_9f24d.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_9f24d.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_9f24d.dir/OpenMPTryFlag.c.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-RLzi7g/OpenMPTryFlag.c
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-RLzi7g/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_9f24d.dir/OpenMPTryFlag.c.o] Error 1
+        make: *** [cmTC_9f24d/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting CXX OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-KlLJ5B"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-KlLJ5B"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_CXX_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-KlLJ5B'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_e0624/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_e0624.dir/build.make CMakeFiles/cmTC_e0624.dir/build
+        Building CXX object CMakeFiles/cmTC_e0624.dir/OpenMPTryFlag.cpp.o
+        /usr/bin/c++   -Xclang -fopenmp -std=gnu++20 -arch arm64 -MD -MT CMakeFiles/cmTC_e0624.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_e0624.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_e0624.dir/OpenMPTryFlag.cpp.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-KlLJ5B/OpenMPTryFlag.cpp
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-KlLJ5B/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_e0624.dir/OpenMPTryFlag.cpp.o] Error 1
+        make: *** [cmTC_e0624/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting C OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-Q5LiT0"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-Q5LiT0"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_C_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-Q5LiT0'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_913a6/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_913a6.dir/build.make CMakeFiles/cmTC_913a6.dir/build
+        Building C object CMakeFiles/cmTC_913a6.dir/OpenMPTryFlag.c.o
+        /usr/bin/cc   -Xclang -fopenmp -arch arm64 -MD -MT CMakeFiles/cmTC_913a6.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_913a6.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_913a6.dir/OpenMPTryFlag.c.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-Q5LiT0/OpenMPTryFlag.c
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-Q5LiT0/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_913a6.dir/OpenMPTryFlag.c.o] Error 1
+        make: *** [cmTC_913a6/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting CXX OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-ivaxEu"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-ivaxEu"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_CXX_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-ivaxEu'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_38749/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_38749.dir/build.make CMakeFiles/cmTC_38749.dir/build
+        Building CXX object CMakeFiles/cmTC_38749.dir/OpenMPTryFlag.cpp.o
+        /usr/bin/c++   -Xclang -fopenmp -std=gnu++20 -arch arm64 -MD -MT CMakeFiles/cmTC_38749.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_38749.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_38749.dir/OpenMPTryFlag.cpp.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-ivaxEu/OpenMPTryFlag.cpp
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-ivaxEu/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_38749.dir/OpenMPTryFlag.cpp.o] Error 1
+        make: *** [cmTC_38749/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting C OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-eGKHI0"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-eGKHI0"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_C_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-eGKHI0'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_0424c/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_0424c.dir/build.make CMakeFiles/cmTC_0424c.dir/build
+        Building C object CMakeFiles/cmTC_0424c.dir/OpenMPTryFlag.c.o
+        /usr/bin/cc   -Xclang -fopenmp -arch arm64 -MD -MT CMakeFiles/cmTC_0424c.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_0424c.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_0424c.dir/OpenMPTryFlag.c.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-eGKHI0/OpenMPTryFlag.c
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-eGKHI0/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_0424c.dir/OpenMPTryFlag.c.o] Error 1
+        make: *** [cmTC_0424c/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting CXX OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-I1TSJ8"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-I1TSJ8"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_CXX_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-I1TSJ8'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_76a76/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_76a76.dir/build.make CMakeFiles/cmTC_76a76.dir/build
+        Building CXX object CMakeFiles/cmTC_76a76.dir/OpenMPTryFlag.cpp.o
+        /usr/bin/c++   -Xclang -fopenmp -std=gnu++20 -arch arm64 -MD -MT CMakeFiles/cmTC_76a76.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_76a76.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_76a76.dir/OpenMPTryFlag.cpp.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-I1TSJ8/OpenMPTryFlag.cpp
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-I1TSJ8/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_76a76.dir/OpenMPTryFlag.cpp.o] Error 1
+        make: *** [cmTC_76a76/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting C OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-MW9dPK"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-MW9dPK"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_C_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-MW9dPK'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_6a609/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_6a609.dir/build.make CMakeFiles/cmTC_6a609.dir/build
+        Building C object CMakeFiles/cmTC_6a609.dir/OpenMPTryFlag.c.o
+        /usr/bin/cc   -Xclang -fopenmp -arch arm64 -MD -MT CMakeFiles/cmTC_6a609.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_6a609.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_6a609.dir/OpenMPTryFlag.c.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-MW9dPK/OpenMPTryFlag.c
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-MW9dPK/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_6a609.dir/OpenMPTryFlag.c.o] Error 1
+        make: *** [cmTC_6a609/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting CXX OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-eVNCU1"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-eVNCU1"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_CXX_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-eVNCU1'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_7cc01/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_7cc01.dir/build.make CMakeFiles/cmTC_7cc01.dir/build
+        Building CXX object CMakeFiles/cmTC_7cc01.dir/OpenMPTryFlag.cpp.o
+        /usr/bin/c++   -Xclang -fopenmp -std=gnu++20 -arch arm64 -MD -MT CMakeFiles/cmTC_7cc01.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_7cc01.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_7cc01.dir/OpenMPTryFlag.cpp.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-eVNCU1/OpenMPTryFlag.cpp
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-eVNCU1/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_7cc01.dir/OpenMPTryFlag.cpp.o] Error 1
+        make: *** [cmTC_7cc01/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting C OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-U4GyQp"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-U4GyQp"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_C_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-U4GyQp'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_d927c/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_d927c.dir/build.make CMakeFiles/cmTC_d927c.dir/build
+        Building C object CMakeFiles/cmTC_d927c.dir/OpenMPTryFlag.c.o
+        /usr/bin/cc   -Xclang -fopenmp -arch arm64 -MD -MT CMakeFiles/cmTC_d927c.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_d927c.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_d927c.dir/OpenMPTryFlag.c.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-U4GyQp/OpenMPTryFlag.c
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-U4GyQp/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_d927c.dir/OpenMPTryFlag.c.o] Error 1
+        make: *** [cmTC_d927c/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting CXX OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-w96UP6"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-w96UP6"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_CXX_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-w96UP6'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_f0f43/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_f0f43.dir/build.make CMakeFiles/cmTC_f0f43.dir/build
+        Building CXX object CMakeFiles/cmTC_f0f43.dir/OpenMPTryFlag.cpp.o
+        /usr/bin/c++   -Xclang -fopenmp -std=gnu++20 -arch arm64 -MD -MT CMakeFiles/cmTC_f0f43.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_f0f43.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_f0f43.dir/OpenMPTryFlag.cpp.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-w96UP6/OpenMPTryFlag.cpp
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-w96UP6/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_f0f43.dir/OpenMPTryFlag.cpp.o] Error 1
+        make: *** [cmTC_f0f43/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting C OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-csMQNS"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-csMQNS"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_C_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-csMQNS'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_eebf8/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_eebf8.dir/build.make CMakeFiles/cmTC_eebf8.dir/build
+        Building C object CMakeFiles/cmTC_eebf8.dir/OpenMPTryFlag.c.o
+        /usr/bin/cc   -Xclang -fopenmp -arch arm64 -MD -MT CMakeFiles/cmTC_eebf8.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_eebf8.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_eebf8.dir/OpenMPTryFlag.c.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-csMQNS/OpenMPTryFlag.c
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-csMQNS/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_eebf8.dir/OpenMPTryFlag.c.o] Error 1
+        make: *** [cmTC_eebf8/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting CXX OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-s63TgT"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-s63TgT"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_CXX_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-s63TgT'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_b07f9/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_b07f9.dir/build.make CMakeFiles/cmTC_b07f9.dir/build
+        Building CXX object CMakeFiles/cmTC_b07f9.dir/OpenMPTryFlag.cpp.o
+        /usr/bin/c++   -Xclang -fopenmp -std=gnu++20 -arch arm64 -MD -MT CMakeFiles/cmTC_b07f9.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_b07f9.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_b07f9.dir/OpenMPTryFlag.cpp.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-s63TgT/OpenMPTryFlag.cpp
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-s63TgT/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_b07f9.dir/OpenMPTryFlag.cpp.o] Error 1
+        make: *** [cmTC_b07f9/fast] Error 2
+        
+      exitCode: 2
+...
+
+---
+events:
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting C OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-stmCb1"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-stmCb1"
+    cmakeVariables:
+      CMAKE_C_FLAGS: ""
+      CMAKE_C_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_C_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-stmCb1'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_afc62/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_afc62.dir/build.make CMakeFiles/cmTC_afc62.dir/build
+        Building C object CMakeFiles/cmTC_afc62.dir/OpenMPTryFlag.c.o
+        /usr/bin/cc   -Xclang -fopenmp -arch arm64 -MD -MT CMakeFiles/cmTC_afc62.dir/OpenMPTryFlag.c.o -MF CMakeFiles/cmTC_afc62.dir/OpenMPTryFlag.c.o.d -o CMakeFiles/cmTC_afc62.dir/OpenMPTryFlag.c.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-stmCb1/OpenMPTryFlag.c
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-stmCb1/OpenMPTryFlag.c:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_afc62.dir/OpenMPTryFlag.c.o] Error 1
+        make: *** [cmTC_afc62/fast] Error 2
+        
+      exitCode: 2
+  -
+    kind: "try_compile-v1"
+    backtrace:
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:250 (try_compile)"
+      - "/opt/homebrew/share/cmake/Modules/FindOpenMP.cmake:557 (_OPENMP_GET_FLAGS)"
+      - "CMakeLists.txt:23 (find_package)"
+    description: "Detecting CXX OpenMP compiler info"
+    directories:
+      source: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-KYZf9c"
+      binary: "/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-KYZf9c"
+    cmakeVariables:
+      CMAKE_CXX_FLAGS: ""
+      CMAKE_CXX_FLAGS_DEBUG: "-g"
+      CMAKE_EXE_LINKER_FLAGS: ""
+      CMAKE_OSX_ARCHITECTURES: ""
+      CMAKE_OSX_DEPLOYMENT_TARGET: ""
+      CMAKE_OSX_SYSROOT: ""
+    buildResult:
+      variable: "OpenMP_COMPILE_RESULT_CXX_Xclang fopenmp"
+      cached: true
+      stdout: |
+        Change Dir: '/Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-KYZf9c'
+        
+        Run Build Command(s): /opt/homebrew/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_7561a/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_7561a.dir/build.make CMakeFiles/cmTC_7561a.dir/build
+        Building CXX object CMakeFiles/cmTC_7561a.dir/OpenMPTryFlag.cpp.o
+        /usr/bin/c++   -Xclang -fopenmp -std=gnu++20 -arch arm64 -MD -MT CMakeFiles/cmTC_7561a.dir/OpenMPTryFlag.cpp.o -MF CMakeFiles/cmTC_7561a.dir/OpenMPTryFlag.cpp.o.d -o CMakeFiles/cmTC_7561a.dir/OpenMPTryFlag.cpp.o -c /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-KYZf9c/OpenMPTryFlag.cpp
+        /Users/mathys/Documents/_Mout/GRAVITATIONAL-SIM/build/CMakeFiles/CMakeScratch/TryCompile-KYZf9c/OpenMPTryFlag.cpp:2:10: fatal error: 'omp.h' file not found
+            2 | #include <omp.h>
+              |          ^~~~~~~
+        1 error generated.
+        make[1]: *** [CMakeFiles/cmTC_7561a.dir/OpenMPTryFlag.cpp.o] Error 1
+        make: *** [cmTC_7561a/fast] Error 2
+        
+      exitCode: 2
+...
