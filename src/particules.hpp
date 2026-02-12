@@ -189,9 +189,9 @@ public:
 	        }
 	    };
 
-	    spawn(foyer1, n1, 0, 0.2f, 0.5f, 1.0f); // bleu
-	    spawn(foyer2, n2, 1, 0.2f, 1.0f, 0.2f); // vert
-	    spawn(foyer3, n3, 2, 1.0f, 0.2f, 0.2f); // rouge
+		spawn(foyer1, n1, 0, 0.4f, 0.7f, 1.0f);   // bleu nébuleuse
+		spawn(foyer2, n2, 1, 0.6f, 1.0f, 0.8f);   // vert menthe cosmique
+		spawn(foyer3, n3, 2, 1.0f, 0.6f, 0.4f);   // orange stellaire
 
 	    trails.assign(vertices.size(), {});
 		for (size_t i = 0; i < vertices.size(); ++i) {
@@ -703,12 +703,11 @@ public:
 		    }
 		}
 
-	    compactDead();
+		compactDead();
 
-	    energyTotal = 0.0f;
+		energyTotal = 0.0f;
 		massTotal   = 0.0f;
-		for (int i = 0; i < N; ++i) {
-		    if (!vertices[i].alive) continue;
+		for (size_t i = 0; i < vertices.size(); ++i) {
 		    energyTotal += vertices[i].energy;
 		    massTotal   += vertices[i].mass;
 		}
@@ -803,24 +802,25 @@ public:
 	    if (maxM < 1e-12f) maxM = 1.0f;
 	    if (maxE < 1e-12f) maxE = 1.0f;
 
-	    // Convert -> RGB + upload textures
-	    for (int i = hmW*hmH; i > 0 ; --i)
-	    {
-	        float tm = std::log1p(massGrid[i]);
-			float tmMax = std::log1p(maxM);
-			tm = tm / (maxM > 1e-12f ? tmMax : 1.0f);
-			float te = std::log1p(energyGrid[i]);
-			float teMax = std::log1p(maxE);
-			te = te / (maxE > 1e-12f ? teMax : 1.0f);
+		const int N = hmW * hmH;
+		for (int i = 0; i < N; ++i)
+		{
+		    float tm    = std::log1p(massGrid[i]);
+		    float tmMax = std::log1p(maxM);
+		    tm = tm / (tmMax > 1e-12f ? tmMax : 1.0f);
 
-	        unsigned char r,g,b;
+		    float te    = std::log1p(energyGrid[i]);
+		    float teMax = std::log1p(maxE);
+		    te = te / (teMax > 1e-12f ? teMax : 1.0f);
 
-	        colormap(tm, r,g,b);
-	        rgbMass[3*i+0] = r; rgbMass[3*i+1] = g; rgbMass[3*i+2] = b;
+		    unsigned char r,g,b;
 
-	        colormap(te, r,g,b);
-	        rgbEnergy[3*i+0] = r; rgbEnergy[3*i+1] = g; rgbEnergy[3*i+2] = b;
-	    }
+		    colormap(tm, r,g,b);
+		    rgbMass[3*i+0] = r; rgbMass[3*i+1] = g; rgbMass[3*i+2] = b;
+
+		    colormap(te, r,g,b);
+		    rgbEnergy[3*i+0] = r; rgbEnergy[3*i+1] = g; rgbEnergy[3*i+2] = b;
+		}
 
 	    glBindTexture(GL_TEXTURE_2D, texMass);
 	    glTexSubImage2D(GL_TEXTURE_2D, 0, 0,0, hmW,hmH, GL_RGB, GL_UNSIGNED_BYTE, rgbMass.data());
@@ -845,7 +845,10 @@ public:
 	{
 	    if (trailVAO == 0 || trailVBO == 0) return;
 
-	    // IMPORTANT : évite out-of-range si trails pas synchro
+	    if (trails.size() != vertices.size()) {
+		        trails.resize(vertices.size());
+		}
+
 	    size_t n = std::min(vertices.size(), trails.size());
 	    if (n == 0) return;
 
