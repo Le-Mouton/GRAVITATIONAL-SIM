@@ -116,6 +116,8 @@ int main() {
 
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_PROGRAM_POINT_SIZE);
+    glEnable(GL_BLEND);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE);
 
     // Setup Dear ImGui context
     IMGUI_CHECKVERSION();
@@ -168,7 +170,7 @@ int main() {
         int w, h;
         glfwGetFramebufferSize(window, &w, &h);
         glViewport(0, 0, w, h);
-        glClearColor(0.1f, 0.12f, 0.18f, 1.0f);
+        glClearColor(0.03f, 0.04f, 0.08f, 1.0f);
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
         // Matrices
@@ -200,6 +202,8 @@ int main() {
         particule.shader.setFloat("uViewportH", (float)h);
         particule.shader.setFloat("uFovY", glm::radians(fov));
         particule.shader.setVec3("uCameraPos", cameraPos);
+
+        
 
         particule.renderUpdate();
 
